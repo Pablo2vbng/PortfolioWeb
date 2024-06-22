@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- MENU SUPERIOR -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Portfolio</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#init" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#about-me" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+                <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+    <!-- MENU SUPERIOR -->
+    <section id="init" class="init">
+        <div class="banner">
+            <div class="container-img">
+                <img src="img/Pablo Vidal.png" alt="">
+            </div>
+            <h1>Pablo Vidal</h1>
+            <h2>Programador web</h2>
+            <div class = "nets">
+                <a href = "#"><i class="fa-brands fa-facebook"></i></a>
+                <a href = "#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href = "#"><i class="fa-brands fa-instagram"></i></a>
+                <a href = "#"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+
+    </section>
+    <!-- SOBRE MI -->
+     <section id = "about-me" class ="about-me">
+        <div class = "section-content">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, Soy Pablo Vidal</span> Profesional con más de 20 años de experiencia en 
+                el sector comercial, especializado en ventas y diseño web. 
+                Poseo formación en HTML, JavaScript, CSS, Python, Wordpress, Prestashop y certificaciones en 
+                idiomas como el Inglés, Francés y Valenciano. Mi enfoque en la mejora continua 
+                e innovación me permite optimizar procesos y agregar valor. busco nuevas oportunidades 
+                para aplicar mis conocimientos y habilidades.</p>
+
+                <div class ="row">
+                    <div class="col">
+                        <h3>Datos personales</h3>
+                        <ul>
+                            <li> 
+                                <strong>Cumpleaños</strong>
+                                16/06/1983
+                            </li>
+                            <li> 
+                                <strong>Email</strong>
+                                pautools46@gmail.com
+                            </li>
+                            <li> 
+                                <strong>Teléfono</strong>
+                                670315792
+                            </li>
+                            <li> 
+                                <strong>Dirección</strong>
+                                C/ Sol, 6 Beniganim (Valencia)
+                            </li>
+                            <li> 
+                                <strong>Cargo</strong>
+                                Freelance
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col">
+                        <h3>Skills</h3>
+                        <div class="interest-container">
+                            <div class = "interest">
+                                <span>HTML</span>
+                                <i class="fa-brands fa-html5"></i>
+                            </div>
+                            <div class = "interest">
+                                <span>CSS</span>
+                                <i class="fa-brands fa-css3-alt"></i>
+                            </div>
+                            <div class = "interest">
+                                <span>JavaScript</span>
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                            <div class = "interest">
+                                <span>PYTHON</span>
+                                <i class="fa-brands fa-python"></i>
+                            </div>
+                            <div class = "interest">
+                                <span>CORELDRAW</span>
+                                <i class="fa-solid fa-photo-film"></i>
+                            </div>
+                            <div class = "interest">
+                                <span>IDIOMAS</span>
+                                <i class="fa-solid fa-language"></i>
+                            </div>
+                            <div class = "interest">
+                                <span>CCEE</span>
+                                <i class="fa-solid fa-coins"></i>
+                            </div>
+                            <div class = "interest">
+                                <span>SAGE SP</span>
+                                <i class="fa-brands fa-contao"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button>
+                    Descargar CV <i class="fa-solid fa-download"></i>
+                    <span class ="overlay"></span>
+                </button>
+        </div>
+     </section>
+
+      <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Diplomatura en CCEE</h4>
+                        <span class="casa">Universidad de Valencia</span>
+                        <span class="fecha">2000-2003</span>
+                        <p>Diplomado en Ciencas Empresariales por la Universidad de Valencia. Estudios superiores en contabilidad, finanzas y marketing. Especialidad en economía de la pequeña empresa. </p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Idiomas</h4>
+                        <span class="casa">Escuela oficial de Idiomas</span>
+                        <span class="fecha">2005 - 2012</span>
+                        <p>Estudio de idiomas. Certificado B2 inglés. Intermedio avanzado.
+                            Certificado B1 en francés. Nivel intermedio.
+                            Certificado C2 Valenciano. Nivel superior avanzado. 
+                        </p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Desarrolo web y programación</h4>
+                        <span class="casa">Bootcamps y cursos</span>
+                        <span class="fecha">2020-2024</span>
+                        <p>Lógica de programación. Python. JavaScript, Desarrollo Web, HTML y CSS, 
+                            Contabilidad Empresarial, Sage Contaplus, Sage Facturaplus, Coreldraw, 
+                            Adobe Ilustrator, Microsoft Office. 
+                        </p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Dpto contabilidad</h4>
+                        <span class="casa">Beniplast-Benitex, S.A.</span>
+                        <span class="fecha">2002-2003</span>
+                        <p>Trabajo en tareas administrativas. Contabilidad de costes. Contabilidad Financiera.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Dpto Ventas</h4>
+                        <span class="casa">CV Tools, S.L.</span>
+                        <span class="fecha">2003 - 2024</span>
+                        <p>Dirección comercial. esponsable de desarrollar y ejecutar la estrategia comercial de la empresa. 
+                            Supervisión de las actividades de ventas y marketing, la gestión de relaciones con los clientes, 
+                            la identificación de nuevas oportunidades de negocio y la maximización de los ingresos. </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Desarrollador Web</h4>
+                        <span class="casa">Freelance</span>
+                        <span class="fecha">2015-2024</span>
+                        <p>Responsable de diseñar, codificar y modificar sitios web, desde el layout hasta la función 
+                            y de acuerdo a las especificaciones del cliente. Se asegura de que los sitios sean visualmente 
+                            atractivos, fáciles de navegar y que cumplan con las mejores prácticas de diseño 
+                            y desarrollo web. Creación freelance de páginas web y soluciones empresariales informáticas. </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECCION TITULO PORTFOLIO -->
+    <section class = "portfolio-tittle">
+        <h1>PORTFOLIO</h1>
+    </section> 
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="banner">
+            <div class="container-img">
+                <img src="img/app envío mails.png" alt="">
+            </div>
+            <h1>Mailing web app</h1>
+            <h2>JavaScript, HTML, CSS</h2>
+            <div class = "nets">
+                <a href = "Proyectos\1-Envio mail\index.html"> <i class="fa-solid fa-arrow-right"></i></a>
+                <a href = "#"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="container-img">
+                <img src="img/calculadora Espana.png" alt="">
+            </div>
+            <h1>Calculadora</h1>
+            <h2>Python</h2>
+            <div class = "nets">
+                <a href = "Proyectos\CALCULADORA ESPAÑA\Calculadora-Espa-a\Calculadora_VIVA_ESPAÑA.py"> <i class="fa-solid fa-arrow-right"></i></a>
+                <a href = "#"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="container-img">
+                <img src="img/encuesta friki web.png"">
+            </div>
+            <h1>FRIKI WEB</h1>
+            <h2>HTML, CSS</h2>
+            <div class = "nets">
+                <a href = "Proyectos\Frikiweb 1 Encuesta Friki\Frikiweb.html"> <i class="fa-solid fa-arrow-right"></i></a>
+                <a href = "#"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="portfolio">
+        <div class="banner">
+            <div class="container-img">
+                <img src="img/web demon slayer.png" alt="">
+            </div>
+            <h1>Demon Slayer Web</h1>
+            <h2>HTML, CSS</h2>
+            <div class = "nets">
+                <a href = "Proyectos\Frikiweb 2 Demon Slayer\DemonSlayerweb..html"> <i class="fa-solid fa-arrow-right"></i></a>
+                <a href = "#"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" placeholder="Tu Nombre">
+                    <input type="text" placeholder="Número telefónico">
+                    <input type="text" placeholder="Dirección de correo">
+                    <input type="text" placeholder="Asunto">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>
+                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <img src="img/ubicacion.png" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                C/Sol, 6, Benigànim (Valencia)
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Llámanos: +0034 670315792
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: pautools46@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#init" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-skype"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-solid fa-rss"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
