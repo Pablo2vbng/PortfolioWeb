@@ -451,7 +451,7 @@ html{
 }
 
 .portfolio .banner{
-    padding: 20px;
+    padding: 5px;
     background-color: lightblue;
     max-width: 350px;
     margin: auto;
@@ -525,7 +525,7 @@ html{
     padding: 18px;
     border: none;
     margin-bottom: 20px;
-    background-color: white;
+    background-color: rgba(30,35,38,.8);
     color: #fff;
     font-size: 18px;
     border-radius: 5px;
@@ -577,7 +577,7 @@ html{
     margin-bottom: 20px;
 }
 .contacto .col .info ul li i{
-    color: white;
+    color: rgba(30,35,38,.8);
     display: inline-block;
     margin-right: 20px;
 }
