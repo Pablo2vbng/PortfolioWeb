@@ -492,15 +492,18 @@ html{
 
 /* SECCION CONTACTO */
 .contacto{
+    display:flex;
     background-image: url(img/contact_bg.png);
     background-color: lightblue;
     color: rgba(30,35,38,.8);
     padding: 50px 0;
     color:white;
+    text-align: center;
 }
 .contacto .contenido-seccion{
     max-width: 1100px;
     margin: auto;
+   text-align: center;
     
 }
 .contacto h2{
@@ -511,13 +514,15 @@ html{
 }
 .contacto .fila{
     display: flex;
+    text-align: center;
     
 }
 .contacto .col{
-    width: 50%;
+    width: 100%;
     padding: 10px;
     position: relative;
     color: white;
+    align-items: center;
 }
 .contacto .col input, .contacto .col textarea{
     display: block;
@@ -530,6 +535,7 @@ html{
     font-size: 18px;
     border-radius: 5px;
     border-color: rgba(30,35,38,.8);
+    text-align: center;
 }
 .contacto button{
     cursor: pointer;
@@ -543,6 +549,7 @@ html{
     color: rgba(30,35,38,.8);
     position: relative;
     z-index: 10;
+    text-align: center;
 }
 .contacto button .overlay{
     position: absolute;
@@ -580,6 +587,7 @@ html{
     color: rgba(30,35,38,.8);
     display: inline-block;
     margin-right: 20px;
+    text-align: center;
 }
 footer{
     background-color: rgba(30,35,38,.8);

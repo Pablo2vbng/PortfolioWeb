@@ -61,7 +61,7 @@ header img{
 }
 h1{
    text-align: center;
-   color: white; 
+   color:white; 
 }
 
 h2 h3 p {
@@ -97,7 +97,7 @@ nav div{
     width: 75%;
     padding: 3%;
     text-align: center;
-    color: white;
+    color: black;
     border-color: white;
     padding-bottom: 5%;
     font-weight: inherit;
