@@ -442,7 +442,7 @@ html{
 
 }
 .portfolio {
-    background-color: rgba(30,35,38,.8);
+    background: rgba(30,35,38,.8);
     background-size: cover;
     height: 100vh;
     color: rgba(30,35,38,.8);
