@@ -95,6 +95,9 @@
     cursor: url('C:\Users\pablo\Desktop\programacion\HTML Y CSS\PRACTICAS\img\SUPERMAN CURSOR 32 PX.png'), auto;
    
   } 
+  .superman{
+    max-width: 200px;
+  }
 
   @keyframes animacionfondo {
     0%{background-position: 0 50%;}
