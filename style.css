@@ -171,6 +171,7 @@ html{
 .about-me .row  .col .interest-containers{
     display: flex;
     flex-wrap: wrap;
+    justify-content: right;
 }
 .about-me .row  .col .interest-container .interest{
     width: 100px;
@@ -181,7 +182,7 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     transition: .3s;
 }.about-me .row  .col .interest-container .interest:hover{
     background-color: lightblue;
