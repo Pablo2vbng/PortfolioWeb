@@ -451,21 +451,25 @@ html{
 
 }
 .portfolio {
-    background: rgba(30,35,38,.8);
-    background-size: cover;
-    height: 100vh;
-    color: rgba(30,35,38,.8);
     display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(30,35,38,.8);
+    background-size: cover;
+    height: auto;
+    color: rgba(30,35,38,.8);
     align-items: center;
 }
 
 .portfolio .banner{
-    padding: 5px;
+    padding: 20px;
     background-color: lightblue;
     max-width: 350px;
     margin: auto;
     text-align: center;
     border-radius: 40px;
+    border-color: rgba(30,35,38,.8) ;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .portfolio .banner img{
     margin-top: 50px;
@@ -707,3 +711,5 @@ footer .arriba{
         width: 100%;
     }
 }
+
+/* BANNER PORTFOLIO*/
