@@ -293,6 +293,7 @@ html{
     margin-bottom: 10px;
 }
 .about-me button{
+    text-decoration: none;
     cursor: pointer;
     background-color: transparent;
     border: 2px solid white;
@@ -304,6 +305,7 @@ html{
     color: white;
     position: relative;
     z-index: 10;
+   
 }
 .about-me button .overlay{
     position: absolute;
@@ -318,6 +320,13 @@ html{
 .about-me button:hover .overlay{
     width: 100%;
 }
+.boton{
+    text-decoration: none;
+    color:white;
+    font-family: "Poppins", sans-serif;
+
+}
+
 
 /* SECCION CURRICULUM */
 .curriculum{
