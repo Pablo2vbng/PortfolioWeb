@@ -362,6 +362,10 @@ form {
 .u-full-width {
   width: 100%;
   box-sizing: border-box; }
+.u-full-width h2{
+  color:white;
+  
+}
 .u-max-full-width {
   max-width: 100%;
   box-sizing: border-box; }
