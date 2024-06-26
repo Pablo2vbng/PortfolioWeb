@@ -1,13 +1,8 @@
-@font-face {
-    font-family: Comic ;
-    src: url(fonts\Comico.ttf);
-    font-weight: bold;
-    font-style: bold;
-}
+
 
 *{
     box-sizing: border-box;
-    font-family: "Comic";
+    font-family: "Permanent Marker", cursive;
     margin: 0;
     padding: 0;
 }
@@ -16,20 +11,24 @@ html{
  }
 
  body{
-    font-family: "Comic";
+    font-family: "Permanent Marker", cursive;
+ }
+
+ .logo img{
+    width: 75px;
  }
 
  .titulo{
     text-align: center;
     color: white;
-    font-family: "Comic";
+    font-family: "Permanent Marker", cursive;
     background: linear-gradient(to top, firebrick, #1c1c1c);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     font-size: x-large;
-    height: 200px;
+    height: 350px;
  }
 
 .contenedor-header{
@@ -49,7 +48,7 @@ html{
     padding: 15px 20px;
 }
 .contenedor-header header .logo a{
-    font-family: "Comic", sans-serif;
+    font-family: "Permanent Marker", cursive;
     font-size: 36px;
     color: white;
     text-decoration: none;
@@ -109,7 +108,7 @@ html{
 
 .protagonistas h2{
     font-size: 35px;
-    font-family: "Comic", sans-serif;
+    font-family: "Permanent Marker", cursive;
     text-align: center;
     padding: 20px 0;
     color: white;
@@ -130,7 +129,7 @@ html{
 }
 .pilares h2{
     font-size: 48px;
-    font-family: "Comic", sans-serif;
+    font-family: "Permanent Marker", cursive;
     text-align: center;
     padding: 20px 0;
     color: rgba(30,35,38,.8)
@@ -236,7 +235,7 @@ html{
     background-color:#1c1c1c ;
     text-align: center;
     color: lightblue;
-    font-family: "Comic", sans-serif;
+    font-family: "Permanent Marker", cursive;
     font-size: 32px;
 
 }
@@ -272,7 +271,7 @@ html{
  .demonios .banner h1{
     margin-top: 20px;
     font-size: 35px;
-    font-family: "Comic", sans-serif;
+    font-family: "Permanent Marker", cursive;
  }
 
  .demonios .banner .nets a{
@@ -311,7 +310,7 @@ html{
 }
 .seriepelis h2{
     font-size: 48px;
-    font-family: "Comic", sans-serif;
+    font-family: "Permanent Marker", cursive;
     text-align: center;
     padding: 20px 0;
 }
@@ -445,18 +444,67 @@ footer .arriba{
         position: absolute;
         right: 0;
         top: 75px;
-        background-color: #252A2E;
+        background: linear-gradient(to top, firebrick, #1c1c1c);
         width: 180px;
     }
     nav.responsive ul{
-        display: block !important;
+        display: block;
     }
     nav.responsive ul li{
         border-bottom: 1px solid #fff;
         padding: 10px 0;
-    
     }
 }
+@media screen and (max-width:700px){
+    .init .fila{
+        display: block;
+        width: fit-content;
+    }
+    .init .fila .col{
+        width: fit-content;
+    }
+
+    .protagonistas .fila{
+        display: block;
+    }
+    .protagonistas .fila .col{
+        width: 100%;
+    }
+    .protagonistas .fila .col .barra-skill{
+        width: 100%;
+    }
+
+    .pilares .fila{
+        display: block;
+    }
+    .pilares .fila .col{
+        width: 90%;
+    }
+    .pilares .fila .derecha{
+        margin-left: 20px;
+    }
+
+    .demonios .galeria{
+        display: block;
+        width: 100%;
+    }
+    .demonios .galeria .proyecto{
+        max-width: 100%;
+    }
+    .demonios .galeria .proyecto img{
+        width: 100%;
+    }
+    .seriepelis .fila{
+        display: block;
+    }
+    .seriepelis .fila .col{
+        width: 100%;
+    }
+}
+
+/* BANNER PORTFOLIO*/
+
+
 
 .slidersection{
     background: linear-gradient(to top, grey, firebrick );
