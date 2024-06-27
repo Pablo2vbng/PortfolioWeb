@@ -9,12 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/slider.css">
     <link rel="stylesheet" href="style/cardsProtagonistas.css">
     <link rel="stylesheet" href="style/cardPilares.css">
+    <link rel="stylesheet" href="style/slyderpilaresydemonios.css">
+    <link rel="stylesheet" href="style/anime.css">
 </head>
-<body>
+  <body>
     <!-- MENU SUPERIOR -->
     <div class="contenedor-header">
         <header>
@@ -36,22 +39,22 @@
         </header>
     </div>
     <!-- SECCION SLIDER -->
-    <section class="titulo">
+    <section id="init"  class="titulo">
         <h1>DEMON SLAYER FANWEB</h1>
     </section>
     <!-- SECCION SLIDER -->
     <section class="content-all">
         <div class="content-carrousel">
-            <figure><img src="img/PERSONAJES PRINCIPALES/Inosuke Hashibira.webp"></figure>
-            <figure><img src="img/PERSONAJES PRINCIPALES/Nezuko Kamado.webp"></figure>
-            <figure><img src="img/PILARES/Obanai Iguro – Pilar Serpiente.webp"></figure>
-            <figure><img src="img/PILARES/Tengen Uzui – Pilar del Sonido.webp"></figure>
-            <figure><img src="img/PILARES/Giyū Tomioka – Pilar del Agua PNG.png"></figure>
-            <figure><img src="img/PILARES/Kyojuro Rengoku – Pilar de la Llama.webp"></figure>
-            <figure><img src="img/PILARES/Sakonji Urokodaki – Pilar del Agua.webp"></figure>
-            <figure><img src="img/PILARES/Muichirō Tokitō – Pilar de la Niebla.webp"></figure>
-            <figure><img src="img/PILARES/Shinobu Kochō – Pilar Insecto PNG.webp"></figure>
-            <figure><img src="img/PILARES/Kagaya Ubuyashiki Jefe de los pilares.webp"></figure>
+            <figure><img src="img/LUNAS SUPERIORES.webp"></figure>
+            <figure><img src="img/pilars.webp"></figure>
+            <figure><img src="img/rengoku.webp"></figure>
+            <figure><img src="img/TANJIRO2.avif"></figure>
+            <figure><img src="img/protas 2.webp"></figure>
+            <figure><img src="img/PELICULAS/EL TREN INFINITO DEMON SLAYER PELICULA 1.jpg"></figure>
+            <figure><img src="img/SERIE/TEMPORADA 3.jpeg"></figure>
+            <figure><img src="img/PELICULAS/LA ALDEA DE LOS HERREROS DEMON SLAYER PELICULA 2.jpg"></figure>
+            <figure><img src="img/SERIE/TEMPORADA 4.avif"></figure>
+            <figure><img src="img/SERIE/TEMPORADA 1.jpeg"></figure>
         </div>
     </section>  
     <!-- INICIO -->
@@ -59,11 +62,11 @@
         </div>
     </section>
     <!-- TITULO PROTAGONIASTAS -->
-    <section class="titulo2">
+    <section id = "#protagonistas" class="titulo2">
         <h1>PROTAGONISTAS</h1>
     </section>
     <!-- PROTEGONISTAS -->
-    <section id = "protagonistas" class ="protagonistas">
+    <section id = "#protagonistas" class ="protagonistas">
         <div class="flip-card">
             <div class="flip-card-front">
               <div class="inner">
@@ -160,31 +163,148 @@
           </div>
     </section>
     <!-- TITULO PILARES -->
-    <section class="titulo2">
+    <section id="pilares"  class="titulo2">
         <h1>PILARES</h1>
     </section>
     <!-- PILARES -->
-    <section id="pilares" class="pilares">
-       
+    <section class="pilares">   
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/PILARES/Giyū Tomioka – Pilar del Agua PNG.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/PILARES/Gyomei_anime.webp" alt="">
+            
+          </div>
+          <div class="swiper-slide">
+            <img src="img/PILARES/Kagaya Ubuyashiki Jefe de los pilares.webp" alt="">
+            
+          </div>
+          <div class="swiper-slide">
+            <img src="img/PILARES/Kyojuro Rengoku – Pilar de la Llama.webp" alt="">
+           
+          </div>
+          <div class="swiper-slide">
+            <img src="img/PILARES/Muichirō Tokitō – Pilar de la Niebla.webp" alt="">
+          
+          </div>
+          <div class="swiper-slide">
+            <img src="img/PILARES/Obanai Iguro – Pilar Serpiente.webp" alt="">
+  
+          </div>
+          <div class="swiper-slide">
+            <img src="img/PILARES/Sanemi Shinazugawa – Pilar del Viento.webp" alt="">
+           
+          </div>
+          <div class="swiper-slide">
+            <img src="img/PILARES/Shinobu Kochō – Pilar Insecto PNG.webp" alt="">
+      
+          </div>
+          <div class="swiper-slide">
+            <img src="img/PILARES/Tengen Uzui – Pilar del Sonido.webp" alt="">
+          
+          </div>
+        </div>
+      </div>
     </section>
      <!-- TITULO DEMONIOS -->
-     <section class="titulo2">
+     <section  id="demonios" class="titulo2">
         <h1>DEMONIOS</h1>
     </section>
     <!-- DEMONIOS -->
-     <section id="demonios" class="demonios">
-        
+     <section  class="demonios">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/DEMONIOS/1.webp" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/DEMONIOS/2.webp" alt="">
+            
+          </div>
+          <div class="swiper-slide">
+            <img src="img/DEMONIOS/3.webp" alt="">
+            
+          </div>
+          <div class="swiper-slide">
+            <img src="img/DEMONIOS/4.webp" alt="">
+           
+          </div>
+          <div class="swiper-slide">
+            <img src="img/DEMONIOS/5.jpeg" alt="">
+          
+          </div>
+          <div class="swiper-slide">
+            <img src="img/DEMONIOS/6.webp" alt="">
+  
+          </div>
+          <div class="swiper-slide">
+            <img src="img/DEMONIOS/7.jpg" alt="">
+           
+          </div>
+          <div class="swiper-slide">
+            <img src="img/DEMONIOS/8.webp" alt="">
+      
+          </div>
+          <div class="swiper-slide">
+            <img src="img/DEMONIOS/9.webp" alt="">
+          
+          </div>
+        </div>
+      </div>        
      </section>
     <!-- TITULO PELIS Y SERIES -->
-    <section class="titulo2">
+    <section id="seriepelis" class="titulo2">
         <h1>PELIS Y SERIES</h1>
     </section>
     <!-- PELIS Y SERIE -->
-    <section id="seripelis" class="seriepelis">
-        
-    </section>
-  
-
+    <section  class="seriepelis">
+      <div class="wrapper">
+        <div class="container">
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="card">
+                <div class="row">
+                    <div class="icon">1</div>
+                    <div class="description">
+                        <h1>TEMPORADA 1</h1>
+                       
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c2" >
+            <label for="c2" class="card">
+                <div class="row">
+                    <div class="icon">2</div>
+                    <div class="description">
+                        <h1>TEMPORADA 2</h1>
+                      
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c3" >
+            <label for="c3" class="card">
+                <div class="row">
+                    <div class="icon">3</div>
+                    <div class="description">
+                        <h1>TEMPORADA 3</h1>
+                        
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c4" >
+            <label for="c4" class="card">
+                <div class="row">
+                    <div class="icon">4</div>
+                    <div class="description">
+                        <h1>TEMPORADA 4</h1>
+                       
+                    </div>
+                </div>
+            </label>
+        </div>
+    </div>
+    </section> 
     <!-- footer -->
     <footer>
         <a href="#init" class="arriba">
@@ -198,6 +318,25 @@
         </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 15,
+          stretch: 0,
+          depth: 300,
+          modifier: 1,
+          slideShadows: true,
+        },
+        loop: true,
+      });
+    </script>
+  
+    <!--<script src="js/jsseriepelis.js"></script>-->
 </body>
 </html>

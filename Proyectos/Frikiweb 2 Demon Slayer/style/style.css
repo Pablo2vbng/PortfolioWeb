@@ -253,7 +253,7 @@ html{
 .demonios {
     display: flex;
     flex-wrap: wrap;
-    background: linear-gradient(to top, firebrick, #1c1c1c);
+    background: linear-gradient(to top, #1c1c1c, firebrick);
     background-size: cover;
     height: auto;
     color: rgba(30,35,38,.8);
