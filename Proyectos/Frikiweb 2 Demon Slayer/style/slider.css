@@ -10,6 +10,7 @@
     background: linear-gradient(to top, #1c1c1c, firebrick),
     url(img/PROTAGONISTAS.webp);
     width: 210px;
+    margin-top: 200px;
     margin: auto;
     display:flex;
     align-items: center;

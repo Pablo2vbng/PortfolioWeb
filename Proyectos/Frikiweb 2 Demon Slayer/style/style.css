@@ -28,7 +28,19 @@ html{
     align-items: center;
     justify-content: center;
     font-size: x-large;
-    height: 350px;
+    height: 150px;
+ }
+ .titulo2{
+    text-align: center;
+    color: white;
+    font-family: "Permanent Marker", cursive;
+    background: linear-gradient(to top, firebrick, #1c1c1c);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    height: 100px;
  }
 
 .contenedor-header{
@@ -91,7 +103,6 @@ html{
     height: 100vh;
     color: #fff;
     display: flex;
-    align-items: center;
     max-height: 400px;
 }
 
