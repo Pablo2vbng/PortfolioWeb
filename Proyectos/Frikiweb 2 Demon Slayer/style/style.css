@@ -258,6 +258,7 @@ html{
     height: auto;
     color: rgba(30,35,38,.8);
     align-items: center;
+    min-height: 400px;
 }
 
 .demonios.banner{

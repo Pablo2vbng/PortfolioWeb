@@ -5,7 +5,7 @@
 }
 .pilares{
     height: 100vh;
-    background-color: #01000c;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
