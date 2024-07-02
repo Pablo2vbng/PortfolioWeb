@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body id="dashboard">
+    <div class="container">
+        <h1 id="welcomeMessage"></h1>
+        <div id="registerSection" class="centered">
+            <button onclick="registerTime('entry')">Registrar Entrada <i class="fa-solid fa-registered"></i></button>
+            <button onclick="registerTime('exit')">Registrar Salida <i class="fa-solid fa-registered"></i></button>
+        </div>
+        <table id="historyTable" class="centered">
+            <!-- Contenido generado dinámicamente -->
+        </table>
+        <div id="adminControls" class="centered" style="display: none;">
+            <button onclick="generatePDF('daily')">Generar PDF Diario <i class="fa-solid fa-circle-down"></i></button>
+            <button onclick="generatePDF('weekly')">Generar PDF Semanal <i class="fa-solid fa-circle-down"></i></button>
+            <button onclick="generatePDF('monthly')">Generar PDF Mensual <i class="fa-solid fa-circle-down"></i></button>
+            <button onclick="deleteAllRecords()">Eliminar Todos los Registros <i class="fa-solid fa-circle-arrow-right"></i> </button>
+        </div>
+        <a href="index.html">Volver a Inicio<i class="fa-solid fa-house"></i></a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
