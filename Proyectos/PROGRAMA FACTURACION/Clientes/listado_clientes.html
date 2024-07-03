@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Clientes</title>
+    <link rel="stylesheet" href="styles_listado_clientes.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="scripts.js" defer></script>
+    <script src="scripts2.js" defer></script>
+</head>
+<body>
+    <h1>Listado de Clientes</h1>
+    <table id="clientesTable">
+        <thead>
+            <tr>
+                <th>Nombre Fiscal</th>
+                <th>CIF/NIF</th>
+                <th>Dirección</th>
+                <th>Código Postal</th>
+                <th>Población</th>
+                <th>Provincia</th>
+                <th>Teléfono</th>
+                <th>Email Compras</th>
+                <th>Email Contabilidad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los datos se llenarán mediante JavaScript -->
+        </tbody>
+    </table>
+    <div class = "boton">
+    
+        <button class="listadoclientesboton" onclick="generatePDF()">Imprimir PDF</button>
+        <button class="listadoclientesboton" onclick="goToNuevoCliente()">Nuevo Cliente</button>
+        <button class="listadoclientesboton" type="button" id="backToClientesBtn">Volver a Clientes</button>
+        <button class="listadoclientesboton" type="button" id="backToDashboardBtn">Volver a Menú principal</button>
+    </div>
+</body>
+</html>
