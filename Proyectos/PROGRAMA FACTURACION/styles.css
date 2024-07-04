@@ -24,9 +24,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 5px lightblue;
     text-align: center;
-    width: 100%;
-    max-width: 800px;
-    margin-top: 50px;
+    max-width: 1200px;
+    margin-top: auto;
+    
 }
 
 h1 {

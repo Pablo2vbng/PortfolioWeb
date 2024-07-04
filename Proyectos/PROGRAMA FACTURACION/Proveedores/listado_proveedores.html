@@ -8,7 +8,6 @@
     <!-- Incluir jsPDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="script.js" defer></script>
-
 </head>
 <body>
     <h1>Listado de Clientes</h1>
@@ -33,21 +32,17 @@
     </table>
 
     <div id="buttonsContainer">
-        <button id="backToClientesBtn">Alta clientes</button>
-        <button id="backToDashboardBtn">Volver a menú principal</button>
+        <button id="altaClientesBtn">Alta de Clientes</button>
+        <button id="backToDashboardBtn">Volver a Menú principal</button>
         <button type="button" id="printListPdfBtn">Imprimir Listado de Clientes</button>
-        
     </div>
-    <input type="text" id="searchInput" placeholder="Buscar por Nombre, CIF o Población">
-    <button id="searchBtn">Buscar</button>
-    
-    <table id="clientesTable">
-        <!-- Aquí se generará dinámicamente la tabla de clientes -->
-    </table>
 
+    <div id="searchContainer">
+        <input type="text" id="searchInput" placeholder="Buscar por Nombre, CIF o Población">
+        <button id="searchBtn">Buscar</button>
+    </div>
 
     <script src="jspdf.min.js"></script>
     <script src="script.js"></script>
-
 </body>
 </html>

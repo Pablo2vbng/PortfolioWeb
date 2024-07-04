@@ -70,6 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 case 'administrador':
                     document.getElementById('administradorSection').style.display = 'block';
                     break;
+                case 'compras':
+                    document.getElementById('comprasSection').style.display = 'block';
+                    break;
             }
         }
     }
