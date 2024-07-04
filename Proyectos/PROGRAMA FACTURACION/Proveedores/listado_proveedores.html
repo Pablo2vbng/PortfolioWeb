@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de Clientes</title>
+    <title>Listado de Proveedores</title>
     <link rel="stylesheet" href="style.css">
     <!-- Incluir jsPDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Listado de Clientes</h1>
-    <table id="clientesTable">
+    <h1>Listado de Proveedores</h1>
+    <table id="proveedoresTable">
         <thead>
             <tr>
                 <th>Nombre Fiscal</th>
@@ -26,15 +26,15 @@
                 <th>Acciones</th>
             </tr>
         </thead>
-        <tbody id="clientesBody">
-            <!-- Aquí se cargarán dinámicamente los clientes -->
+        <tbody id="proveedoresBody">
+            <!-- Aquí se cargarán dinámicamente los proveedores -->
         </tbody>
     </table>
 
     <div id="buttonsContainer">
-        <button id="altaClientesBtn">Alta de Clientes</button>
-        <button id="backToDashboardBtn">Volver a Menú principal</button>
-        <button type="button" id="printListPdfBtn">Imprimir Listado de Clientes</button>
+        <button id="backToProveedoresBtn">Alta proveedores</button>
+        <button id="backToDashboardBtn">Volver a menú principal</button>
+        <button type="button" id="printListPdfBtn">Imprimir Listado de Proveedores</button>
     </div>
 
     <div id="searchContainer">
