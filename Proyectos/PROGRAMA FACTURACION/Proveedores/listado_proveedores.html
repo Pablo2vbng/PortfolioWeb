@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de Proveedores</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_listado_proveedores.css">
     <!-- Incluir jsPDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
     <h1>Listado de Proveedores</h1>
+    <div id="searchContainer">
+        <input type="text" id="searchInput" placeholder="Buscar por Nombre, CIF o Población">
+        <button id="searchBtn">Buscar</button>
+    </div>
     <table id="proveedoresTable">
         <thead>
             <tr>
@@ -37,10 +41,7 @@
         <button type="button" id="printListPdfBtn">Imprimir Listado de Proveedores</button>
     </div>
 
-    <div id="searchContainer">
-        <input type="text" id="searchInput" placeholder="Buscar por Nombre, CIF o Población">
-        <button id="searchBtn">Buscar</button>
-    </div>
+    
 
     <script src="jspdf.min.js"></script>
     <script src="script.js"></script>

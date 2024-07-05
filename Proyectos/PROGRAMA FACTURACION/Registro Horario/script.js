@@ -63,6 +63,14 @@ function registerTime(type) {
         records[loggedInUser.username] = [];
     }
 
+    const userRecords = records[loggedInUser.username];
+    const lastRecord = userRecords[userRecords.length - 1];
+
+    if (lastRecord && lastRecord.type === type) {
+        alert(`Ya has registrado una ${type === 'entry' ? 'entrada' : 'salida'}.`);
+        return;
+    }
+
     records[loggedInUser.username].push({ date, time, type });
     localStorage.setItem('records', JSON.stringify(records));
     alert(`Hora de ${type === 'entry' ? 'entrada' : 'salida'} registrada a las ${time}`);

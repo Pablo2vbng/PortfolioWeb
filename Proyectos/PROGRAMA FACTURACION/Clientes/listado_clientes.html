@@ -4,50 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de Clientes</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Incluir jsPDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="script.js" defer></script>
-
+    <link rel="stylesheet" href="style_listado_clientes.css">
 </head>
 <body>
-    <h1>Listado de Clientes</h1>
-    <table id="clientesTable">
-        <thead>
-            <tr>
-                <th>Nombre Fiscal</th>
-                <th>CIF/NIF</th>
-                <th>Nombre Comercial</th>
-                <th>Dirección</th>
-                <th>Código Postal</th>
-                <th>Población</th>
-                <th>Provincia</th>
-                <th>País</th>
-                <th>Teléfono</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody id="clientesBody">
-            <!-- Aquí se cargarán dinámicamente los clientes -->
-        </tbody>
-    </table>
-
-    <div id="buttonsContainer">
-        <button id="backToClientesBtn">Alta clientes</button>
-        <button id="backToDashboardBtn">Volver a menú principal</button>
-        <button type="button" id="printListPdfBtn">Imprimir Listado de Clientes</button>
-        
+    <div class="container">
+        <h1>Listado de Clientes</h1>
+        <div class="buscador">
+            <input type="text" id="searchInput" placeholder="Buscar por nombre, CIF o población">
+            <button id="searchBtn">Buscar</button>
+        </div>
+        <table id="clientesTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>CIF/NIF</th>
+                    <th>Población</th>
+                    <th>Teléfono</th>
+                    <th>Correo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se cargarán dinámicamente los clientes -->
+            </tbody>
+        </table>
+        <div class="boton-container">
+            <button id="printListPdfBtn">Imprimir Listado PDF</button>
+            <button id="backToDashboardBtn">Volver al Menú Principal</button>
+            <button id="backToClientesBtn">Alta de Clientes</button>
+        </div>
     </div>
-    <input type="text" id="searchInput" placeholder="Buscar por Nombre, CIF o Población">
-    <button id="searchBtn">Buscar</button>
-    
-    <table id="clientesTable">
-        <!-- Aquí se generará dinámicamente la tabla de clientes -->
-    </table>
-
-
-    <script src="jspdf.min.js"></script>
     <script src="script.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
 </body>
 </html>

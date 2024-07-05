@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Artículos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Listado de Artículos</h1>
+    <table id="articulosTable">
+        <thead>
+            <tr>
+                <th>Referencia</th>
+                <th>Nombre</th>
+                <th>Tipo de IVA</th>
+                <th>Stock</th>
+                <th>Precio Compra</th>
+                <th>PVP</th>
+                <th>Tarifa</th>
+                <th>EAN13</th>
+                <th>Proveedor</th>
+                <th>Familia</th>
+                <th>Imagen</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <button onclick="window.location.href='../dashboard.html'">Volver al Menú Principal</button>
+    <button onclick="window.location.href='articulos.html'">Alta de Artículos</button>
+    <button onclick="imprimirPDFListado()">Imprimir Listado PDF</button>
+    <input type="text" id="searchInput" placeholder="Buscar por Nombre, Referencia o Familia">
+    <button id="searchBtn">Buscar</button>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+</body>
+</html>

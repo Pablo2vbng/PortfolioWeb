@@ -10,6 +10,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let proveedores = []; // Variable global para almacenar los proveedores cargados
 
+    // Función para inicializar datos de proveedores en LocalStorage
+    function inicializarProveedores() {
+        if (!localStorage.getItem('proveedores')) {
+            console.log('Inicializando proveedores en LocalStorage...');
+            const proveedores = [
+                { id: 1, nombreFiscal: "Leonardo DiCaprio", cifNif: "12345678A", poblacion: "Hollywood Hills", telefono: "600000001", correoCompras: "leonardo@titanic.com" },
+                { id: 2, nombreFiscal: "Scarlett Johansson", cifNif: "23456789B", poblacion: "Avengers Tower", telefono: "600000002", correoCompras: "scarlett@avengers.com" },
+                { id: 3, nombreFiscal: "Tom Hanks", cifNif: "34567890C", poblacion: "Greenbow", telefono: "600000003", correoCompras: "tom@forrestgump.com" },
+                { id: 4, nombreFiscal: "Meryl Streep", cifNif: "45678901D", poblacion: "Mamma Mia Island", telefono: "600000004", correoCompras: "meryl@mammamia.com" },
+                { id: 5, nombreFiscal: "Robert Downey Jr.", cifNif: "56789012E", poblacion: "Stark Industries", telefono: "600000005", correoCompras: "robert@starkindustries.com" },
+                { id: 6, nombreFiscal: "Jennifer Lawrence", cifNif: "67890123F", poblacion: "Hunger Games Arena", telefono: "600000006", correoCompras: "jennifer@mockingjay.com" },
+                { id: 7, nombreFiscal: "Dwayne Johnson", cifNif: "78901234G", poblacion: "Jumanji Jungle", telefono: "600000007", correoCompras: "dwayne@jumanji.com" },
+                { id: 8, nombreFiscal: "Emma Watson", cifNif: "89012345H", poblacion: "Hogwarts", telefono: "600000008", correoCompras: "emma@hogwarts.com" },
+                { id: 9, nombreFiscal: "Will Smith", cifNif: "90123456I", poblacion: "Bel-Air", telefono: "600000009", correoCompras: "will@belair.com" },
+                { id: 10, nombreFiscal: "Gal Gadot", cifNif: "01234567J", poblacion: "Themyscira", telefono: "600000010", correoCompras: "gal@wonderwoman.com" }
+            ];
+            localStorage.setItem('proveedores', JSON.stringify(proveedores));
+        } else {
+            console.log('Proveedores ya inicializados en LocalStorage.');
+        }
+    }
+
     // Evento para navegar a la lista de proveedores
     if (listProveedoresBtn) {
         listProveedoresBtn.addEventListener('click', function() {
@@ -209,7 +231,8 @@ document.addEventListener('DOMContentLoaded', function() {
         doc.save('listado_proveedores.pdf');
     }
 
-    // Cargar tabla de proveedores al cargar la página
+    // Inicializar datos de proveedores y cargar la tabla al cargar la página
+    inicializarProveedores();
     loadProveedoresTable(JSON.parse(localStorage.getItem('proveedores')));
 
 });

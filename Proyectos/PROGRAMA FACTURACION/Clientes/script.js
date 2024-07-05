@@ -10,6 +10,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let clientes = []; // Variable global para almacenar los clientes cargados
 
+    // Función para inicializar datos de clientes en LocalStorage
+    function inicializarClientes() {
+        if (!localStorage.getItem('clientes')) {
+            console.log('Inicializando clientes en LocalStorage...');
+            const clientes = [
+                { id: 1, nombreFiscal: "Elvis Presley", cifNif: "12345678A", poblacion: "Graceland", telefono: "600000001", correoCompras: "elvis@rockandroll.com" },
+                { id: 2, nombreFiscal: "John Lennon", cifNif: "23456789B", poblacion: "Abbey Road", telefono: "600000002", correoCompras: "john@thebeatles.com" },
+                { id: 3, nombreFiscal: "Mick Jagger", cifNif: "34567890C", poblacion: "Rolling Street", telefono: "600000003", correoCompras: "mick@rollingstones.com" },
+                { id: 4, nombreFiscal: "Freddie Mercury", cifNif: "45678901D", poblacion: "Bohemian Rhapsody", telefono: "600000004", correoCompras: "freddie@queen.com" },
+                { id: 5, nombreFiscal: "Kurt Cobain", cifNif: "56789012E", poblacion: "Nirvana Heights", telefono: "600000005", correoCompras: "kurt@nirvana.com" },
+                { id: 6, nombreFiscal: "David Bowie", cifNif: "67890123F", poblacion: "Starman City", telefono: "600000006", correoCompras: "david@bowie.com" },
+                { id: 7, nombreFiscal: "Jimi Hendrix", cifNif: "78901234G", poblacion: "Purple Haze", telefono: "600000007", correoCompras: "jimi@rocklegend.com" },
+                { id: 8, nombreFiscal: "Janis Joplin", cifNif: "89012345H", poblacion: "Summertime", telefono: "600000008", correoCompras: "janis@bluesrock.com" },
+                { id: 9, nombreFiscal: "Jim Morrison", cifNif: "90123456I", poblacion: "L.A. Woman", telefono: "600000009", correoCompras: "jim@thedoors.com" },
+                { id: 10, nombreFiscal: "Chuck Berry", cifNif: "01234567J", poblacion: "Johnny B. Goode", telefono: "600000010", correoCompras: "chuck@rockandroll.com" }
+            ];
+            localStorage.setItem('clientes', JSON.stringify(clientes));
+        } else {
+            console.log('Clientes ya inicializados en LocalStorage.');
+        }
+    }
+
     // Evento para navegar a la lista de clientes
     if (listClientesBtn) {
         listClientesBtn.addEventListener('click', function() {
@@ -209,7 +231,9 @@ document.addEventListener('DOMContentLoaded', function() {
         doc.save('listado_clientes.pdf');
     }
 
-    // Cargar tabla de clientes al cargar la página
+    // Inicializar datos de clientes y cargar la tabla al cargar la página
+    inicializarClientes();
     loadClientesTable(JSON.parse(localStorage.getItem('clientes')));
 
 });
+

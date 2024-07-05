@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Presupuesto</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Crear Presupuesto</h1>
+    <form id="presupuestoForm">
+        <div class="label-input-container">
+            <label for="presupuestoNumero">Número de Presupuesto:</label>
+            <input type="text" id="presupuestoNumero" readonly>
+        </div>
+
+        <div class="label-input-container">
+            <label for="presupuestoFecha">Fecha:</label>
+            <input type="date" id="presupuestoFecha" readonly>
+        </div>
+
+        <div class="label-input-container">
+            <label for="clienteBuscar">Buscar Cliente:</label>
+            <input type="text" id="clienteBuscar" placeholder="Buscar cliente">
+            <button type="button" id="buscarClienteBtn">🔍</button>
+        </div>
+
+        <div class="label-input-container">
+            <label for="clienteSeleccionado">Cliente Seleccionado:</label>
+            <select id="clienteSeleccionado" required></select>
+        </div>
+
+        <h2>Líneas del Presupuesto</h2>
+        <table id="lineasPresupuesto">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre Artículo</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Total sin IVA</th>
+                    <th>IVA</th>
+                    <th>Total con IVA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se agregarán dinámicamente las líneas del presupuesto -->
+            </tbody>
+        </table>
+        <div class="buttons-container">
+            <button type="button" id="agregarLineaBtn">Agregar Línea</button>
+            <button type="submit">Guardar Presupuesto</button>
+            <button type="button" onclick="imprimirPDFPresupuesto()">Imprimir PDF</button>
+            <button type="button" onclick="window.location.href='listado_presupuestos.html'">Ver Listado de Presupuestos</button>
+            <button type="button" onclick="window.location.href='dashboard.html'">Volver al Menú Principal</button>
+        </div>
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(lightblue, white, lightblue);
+    color: #000;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #326499;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.label-input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.label-input-container label {
+    flex: 1;
+    margin: 0; /* Remove margin */
+    padding-right: 10px; /* Add padding for spacing */
+    font-weight: bold; /* Make the label text bold */
+}
+
+.label-input-container input,
+.label-input-container select,
+.label-input-container button {
+    flex: 2;
+    padding: 10px;
+    margin-top: 0; /* Remove margin-top */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Increase font size */
+}
+
+.label-input-container button {
+    margin-left: 10px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px; /* Add gap between buttons */
+}
+
+button {
+    background-color: #326499;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Increase font size */
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: lightgrey;
+    color: #326499;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: none; /* Eliminar bordes */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Línea separadora */
+}
+
+th {
+    background-color: #326499;
+    color: white;
+}
+
+td input[type="text"], td input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 4px; /* Rounded corners */
+    background: none;
+    font-size: 16px; /* Increase font size */
+}
+
+table td img {
+    max-width: 50px;
+}
+
+@media (max-width: 600px) {
+    .label-input-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .label-input-container label,
+    .label-input-container input,
+    .label-input-container select,
+    .label-input-container button {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button {
+        width: 100%; /* Full width on mobile */
+        margin: 5px 0;
+    }
+}
+

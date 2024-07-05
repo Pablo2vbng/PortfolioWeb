@@ -1,0 +1,287 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // Inicializar datos si no existen en localStorage
+    inicializarDatos();
+
+    // Crear Presupuesto
+    if (document.getElementById('presupuestoForm')) {
+        inicializarPresupuestoForm();
+        document.getElementById('presupuestoForm').addEventListener('submit', guardarPresupuesto);
+        document.getElementById('agregarLineaBtn').addEventListener('click', agregarLineaPresupuesto);
+        document.getElementById('buscarClienteBtn').addEventListener('click', () => window.location.href = 'listado_clientes.html');
+    }
+
+    // Listar Presupuestos
+    if (document.getElementById('presupuestosTable')) {
+        cargarPresupuestos();
+    }
+
+    // Listar Clientes
+    if (document.getElementById('clientesTable')) {
+        cargarClientes();
+    }
+
+    // Listar Artículos
+    if (document.getElementById('articulosTable')) {
+        cargarArticulos();
+    }
+});
+
+// Función para inicializar datos en LocalStorage
+function inicializarDatos() {
+    if (!localStorage.getItem('articulos')) {
+        const articulos = [
+            { referencia: "0001", nombre: "Naruto Uzumaki", tipoIva: "21%", precio: "25.00" },
+            { referencia: "0002", nombre: "Goku", tipoIva: "21%", precio: "27.00" },
+            // Otros artículos...
+        ];
+        localStorage.setItem('articulos', JSON.stringify(articulos));
+    }
+
+    if (!localStorage.getItem('clientes')) {
+        const clientes = [
+            { id: 1, nombre: "Elvis Presley", cifNif: "12345678A", poblacion: "Graceland", telefono: "600000001", correo: "elvis@rockandroll.com" },
+            { id: 2, nombre: "John Lennon", cifNif: "23456789B", poblacion: "Abbey Road", telefono: "600000002", correo: "john@thebeatles.com" },
+            // Otros clientes...
+        ];
+        localStorage.setItem('clientes', JSON.stringify(clientes));
+    }
+
+    if (!localStorage.getItem('presupuestos')) {
+        localStorage.setItem('presupuestos', JSON.stringify([]));
+    }
+}
+
+// Función para inicializar el formulario de presupuesto
+function inicializarPresupuestoForm() {
+    document.getElementById('presupuestoNumero').value = generarNumeroPresupuesto();
+    document.getElementById('presupuestoFecha').value = new Date().toISOString().substr(0, 10);
+}
+
+// Función para generar un número de presupuesto
+function generarNumeroPresupuesto() {
+    const presupuestos = JSON.parse(localStorage.getItem('presupuestos')) || [];
+    return presupuestos.length ? String(presupuestos.length + 1).padStart(4, '0') : '0001';
+}
+
+// Función para buscar cliente
+function buscarCliente() {
+    const searchTerm = document.getElementById('clienteBuscar').value.trim().toLowerCase();
+    const clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+    const resultados = clientes.filter(cliente =>
+        cliente.nombre.toLowerCase().includes(searchTerm) ||
+        cliente.cifNif.toLowerCase().includes(searchTerm)
+    );
+    mostrarResultadosClientes(resultados);
+}
+
+// Función para mostrar resultados de búsqueda de clientes
+function mostrarResultadosClientes(clientes) {
+    const select = document.getElementById('clienteSeleccionado');
+    select.innerHTML = '';
+    clientes.forEach(cliente => {
+        const option = document.createElement('option');
+        option.value = cliente.id;
+        option.textContent = `${cliente.nombre} (${cliente.cifNif})`;
+        select.appendChild(option);
+    });
+}
+
+// Función para cargar clientes en la tabla de listado_clientes.html
+function cargarClientes() {
+    const clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+    const tbody = document.querySelector('#clientesTable tbody');
+    tbody.innerHTML = '';
+    clientes.forEach(cliente => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${cliente.nombre}</td>
+            <td>${cliente.cifNif}</td>
+            <td>${cliente.poblacion}</td>
+            <td>${cliente.telefono}</td>
+            <td>${cliente.correo}</td>
+        `;
+        row.addEventListener('dblclick', () => seleccionarCliente(cliente.id));
+        tbody.appendChild(row);
+    });
+}
+
+// Función para seleccionar cliente y volver al formulario de presupuesto
+function seleccionarCliente(clienteId) {
+    const cliente = JSON.parse(localStorage.getItem('clientes')).find(cliente => cliente.id === clienteId);
+    if (cliente) {
+        localStorage.setItem('clienteSeleccionado', JSON.stringify(cliente));
+        window.location.href = 'crear_presupuesto.html';
+    }
+}
+
+// Función para agregar una línea de presupuesto
+function agregarLineaPresupuesto() {
+    const tbody = document.querySelector('#lineasPresupuesto tbody');
+    const row = document.createElement('tr');
+
+    row.innerHTML = `
+        <td><input type="text" class="buscarArticulo" placeholder="Buscar por nombre"><button type="button" onclick="window.location.href='listado_articulos.html'">🔍</button></td>
+        <td><input type="text" class="nombreArticulo" readonly></td>
+        <td><input type="number" class="cantidad" value="1" min="1" onchange="calcularLinea(this)"></td>
+        <td><input type="text" class="precio" readonly></td>
+        <td><input type="text" class="totalSinIva" readonly></td>
+        <td><input type="text" class="iva" readonly></td>
+        <td><input type="text" class="totalConIva" readonly></td>
+    `;
+
+    tbody.appendChild(row);
+
+    row.querySelector('.buscarArticulo').addEventListener('input', function () {
+        buscarArticulo(this);
+    });
+}
+
+// Función para buscar artículos
+function buscarArticulo(input) {
+    const searchTerm = input.value.trim().toLowerCase();
+    const articulos = JSON.parse(localStorage.getItem('articulos')) || [];
+    const articulo = articulos.find(art => art.nombre.toLowerCase().includes(searchTerm));
+    if (articulo) {
+        const row = input.closest('tr');
+        row.querySelector('.nombreArticulo').value = articulo.nombre;
+        row.querySelector('.precio').value = articulo.precio;
+        row.querySelector('.totalSinIva').value = articulo.precio;
+        const iva = calcularIva(articulo.precio, articulo.tipoIva);
+        row.querySelector('.iva').value = iva;
+        row.querySelector('.totalConIva').value = (parseFloat(articulo.precio) + parseFloat(iva)).toFixed(2);
+    }
+}
+
+// Función para calcular IVA
+function calcularIva(precio, tipoIva) {
+    const ivaPorcentaje = parseFloat(tipoIva) / 100;
+    return (precio * ivaPorcentaje).toFixed(2);
+}
+
+// Función para calcular total por línea
+function calcularLinea(input) {
+    const row = input.closest('tr');
+    const cantidad = input.value;
+    const precio = row.querySelector('.precio').value;
+    const totalSinIva = (cantidad * precio).toFixed(2);
+    row.querySelector('.totalSinIva').value = totalSinIva;
+    const iva = calcularIva(totalSinIva, "21"); // Aquí asumimos un IVA del 21%
+    row.querySelector('.iva').value = iva;
+    row.querySelector('.totalConIva').value = (parseFloat(totalSinIva) + parseFloat(iva)).toFixed(2);
+}
+
+// Función para guardar presupuesto
+function guardarPresupuesto(event) {
+    event.preventDefault();
+    const clienteSeleccionado = JSON.parse(localStorage.getItem('clienteSeleccionado'));
+    if (!clienteSeleccionado) {
+        alert('Seleccione un cliente antes de guardar el presupuesto.');
+        return;
+    }
+
+    const presupuesto = {
+        numero: document.getElementById('presupuestoNumero').value,
+        fecha: document.getElementById('presupuestoFecha').value,
+        cliente: clienteSeleccionado.nombre,
+        lineas: []
+    };
+
+    document.querySelectorAll('#lineasPresupuesto tbody tr').forEach(row => {
+        const linea = {
+            id: row.querySelector('.buscarArticulo').value,
+            nombre: row.querySelector('.nombreArticulo').value,
+            cantidad: row.querySelector('.cantidad').value,
+            precio: row.querySelector('.precio').value,
+            totalSinIva: row.querySelector('.totalSinIva').value,
+            iva: row.querySelector('.iva').value,
+            totalConIva: row.querySelector('.totalConIva').value
+        };
+        presupuesto.lineas.push(linea);
+    });
+
+    const presupuestos = JSON.parse(localStorage.getItem('presupuestos')) || [];
+    presupuestos.push(presupuesto);
+    localStorage.setItem('presupuestos', JSON.stringify(presupuestos));
+    alert('Presupuesto guardado con éxito');
+}
+
+// Función para cargar presupuestos en el listado
+function cargarPresupuestos() {
+    const presupuestos = JSON.parse(localStorage.getItem('presupuestos')) || [];
+    const tbody = document.querySelector('#presupuestosTable tbody');
+    tbody.innerHTML = '';
+    presupuestos.forEach(presupuesto => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${presupuesto.numero}</td>
+            <td>${presupuesto.fecha}</td>
+            <td>${presupuesto.cliente}</td>
+            <td>${presupuesto.lineas.reduce((total, linea) => total + parseFloat(linea.totalConIva), 0).toFixed(2)}</td>
+            <td>
+                <button onclick="editarPresupuesto('${presupuesto.numero}')">Editar</button>
+                <button onclick="eliminarPresupuesto('${presupuesto.numero}')">Eliminar</button>
+                <button onclick="imprimirPDFPresupuesto('${presupuesto.numero}')">Imprimir PDF</button>
+                <button onclick="enviarCorreo('${presupuesto.numero}')">Enviar Correo</button>
+            </td>
+        `;
+        tbody.appendChild(row);
+    });
+}
+
+// Función para editar presupuesto
+function editarPresupuesto(numero) {
+    const presupuestos = JSON.parse(localStorage.getItem('presupuestos')) || [];
+    const presupuesto = presupuestos.find(p => p.numero === numero);
+    if (presupuesto) {
+        localStorage.setItem('presupuestoEditar', JSON.stringify(presupuesto));
+        window.location.href = 'crear_presupuesto.html'; // Redirigir a la página de edición
+    }
+}
+
+// Función para eliminar presupuesto
+function eliminarPresupuesto(numero) {
+    let presupuestos = JSON.parse(localStorage.getItem('presupuestos')) || [];
+    presupuestos = presupuestos.filter(p => p.numero !== numero);
+    localStorage.setItem('presupuestos', JSON.stringify(presupuestos));
+    cargarPresupuestos();
+}
+
+// Función para imprimir el presupuesto en PDF
+function imprimirPDFPresupuesto(numero) {
+    const presupuestos = JSON.parse(localStorage.getItem('presupuestos')) || [];
+    const presupuesto = presupuestos.find(p => p.numero === numero);
+    if (presupuesto) {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        doc.setFontSize(12);
+        doc.text("Empresa de Prueba", 10, 10);
+        doc.text("Presupuesto Número: " + presupuesto.numero, 10, 20);
+        doc.text("Fecha: " + presupuesto.fecha, 10, 30);
+        doc.text("Cliente: " + presupuesto.cliente, 10, 40);
+
+        let y = 50;
+        presupuesto.lineas.forEach(linea => {
+            doc.text(`Artículo: ${linea.nombre}`, 10, y);
+            doc.text(`Cantidad: ${linea.cantidad}`, 100, y);
+            doc.text(`Precio: ${linea.precio}`, 130, y);
+            doc.text(`Total sin IVA: ${linea.totalSinIva}`, 160, y);
+            doc.text(`IVA: ${linea.iva}`, 200, y);
+            doc.text(`Total con IVA: ${linea.totalConIva}`, 240, y);
+            y += 10;
+        });
+
+        doc.save('presupuesto_' + presupuesto.numero + '.pdf');
+    }
+}
+
+// Función para enviar el presupuesto por correo
+function enviarCorreo(numero) {
+    const presupuestos = JSON.parse(localStorage.getItem('presupuestos')) || [];
+    const presupuesto = presupuestos.find(p => p.numero === numero);
+    if (presupuesto) {
+        const cliente = JSON.parse(localStorage.getItem('clientes')).find(c => c.id === parseInt(presupuesto.cliente));
+        if (cliente) {
+            window.location.href = `mailto:${cliente.correo}?subject=Presupuesto Número ${presupuesto.numero}&body=Estimado ${cliente.nombre},%0D%0A%0D%0AAdjunto encontrará su presupuesto.%0D%0A%0D%0AAtentamente,%0D%0ASu Empresa`;
+        }
+    }
+}
