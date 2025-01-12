@@ -1,0 +1,67 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Gris claro de fondo */
+    color: #333; /* Color de texto principal */
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    padding-left: 10%;
+}
+
+h1 {
+    text-align: center;
+    color: black; /* Azul */
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff; /* Blanco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Gris claro */
+}
+
+thead {
+    background-color: #326499; /* Azul */
+    color: #fff; /* Texto blanco */
+}
+
+/* Estilos responsivos */
+@media only screen and (max-width: 768px) {
+    table {
+        font-size: 12px;
+    }
+    table th, table td {
+        padding: 8px;
+    }
+}
+
+/* Estilos para botones */
+button {
+
+    background-color: #326499; /* Azul */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: lightblue; /* Azul más oscuro al pasar el ratón */
+}
+
+
+.boton {
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+}

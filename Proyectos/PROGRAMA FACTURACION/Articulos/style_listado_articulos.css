@@ -1,0 +1,165 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(lightblue, white, lightblue);
+    color: #333; /* Color de texto principal */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: black; /* Negro */
+    margin: 20px 0;
+}
+
+/* Contenedor para centrar contenido */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff; /* Blanco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    display: block;
+    border: none; /* Quitar el borde de la tabla */
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: none; /* Quitar la línea inferior de las celdas */
+}
+
+thead {
+    background-color: #326499; /* Azul */
+    color: #fff; /* Texto blanco */
+}
+
+/* Estilos para botones */
+button {
+    background-color: #326499; /* Azul */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: lightblue; /* Azul más claro al pasar el ratón */
+}
+
+/* Estilos para el buscador */
+#searchInput {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 10px;
+    width: calc(100% - 40px); /* Ajusta el ancho para móviles */
+    max-width: 300px;
+}
+
+#searchBtn {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #326499; /* Azul */
+    color: #fff; /* Texto blanco */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#searchBtn:hover {
+    background-color: lightblue; /* Azul más claro al pasar el ratón */
+}
+
+/* Estilos responsivos */
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table, table tr, table td {
+        display: block;
+        width: 85%;
+    }
+
+    table tr {
+        margin-bottom: 10px;
+        border: none; /* Quitar el borde de las filas */
+        border-radius: 5px;
+    }
+
+    table td {
+        text-align: center;
+        padding-left: 40%;
+        position: relative;
+        border-bottom: none; /* Quitar la línea inferior de las celdas */
+    }
+
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+
+    #searchInput {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #searchBtn, button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.navegar{
+    background-color: rgb(163, 92, 163);
+}

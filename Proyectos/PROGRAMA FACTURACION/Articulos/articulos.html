@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta de Artículos</title>
+    <link rel="stylesheet" href="style_articulos.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Alta de Artículos</h1>
+    <form id="articuloForm">
+        <div class="label-input-container">
+            <label for="referencia">Referencia:</label>
+            <input type="text" id="referencia" name="referencia" readonly>
+        </div>
+
+        <div class="label-input-container">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="label-input-container">
+            <label for="tipoIva">Tipo de IVA:</label>
+            <select id="tipoIva" name="tipoIva" required>
+                <option value="21%">Normal 21%</option>
+                <option value="10%">Reducido 10%</option>
+                <option value="4%">Superreducido 4%</option>
+            </select>
+        </div>
+
+        <div class="label-input-container">
+            <label for="stock">Stock:</label>
+            <input type="number" id="stock" name="stock" required>
+        </div>
+
+        <div class="label-input-container">
+            <label for="precioCompra">Precio Compra:</label>
+            <input type="number" id="precioCompra" name="precioCompra" step="0.01" required>
+        </div>
+
+        <div class="label-input-container">
+            <label for="pvp">PVP:</label>
+            <input type="number" id="pvp" name="pvp" step="0.01" required>
+        </div>
+
+        <div class="label-input-container">
+            <label for="tarifa">Tarifa:</label>
+            <select id="tarifa" name="tarifa" required>
+                <option value="netos">Netos</option>
+                <option value="netos+">Netos+</option>
+                <option value="PVPdto">PVPdto</option>
+            </select>
+        </div>
+
+        <div class="label-input-container">
+            <label for="ean13">EAN13:</label>
+            <input type="text" id="ean13" name="ean13" required>
+        </div>
+
+        <div class="label-input-container">
+            <label for="proveedor">Proveedor:</label>
+            <input type="text" id="proveedor" name="proveedor" list="proveedores" required>
+            <datalist id="proveedores">
+                <!-- Opciones cargadas dinámicamente -->
+            </datalist>
+        </div>
+
+        <div class="label-input-container">
+            <label for="familia">Familia:</label>
+            <input type="text" id="familia" name="familia" list="familias" required>
+            <datalist id="familias">
+                <!-- Opciones cargadas dinámicamente -->
+            </datalist>
+        </div>
+
+        <div class="label-input-container">
+            <label for="imagen">Imagen:</label>
+            <input type="file" id="imagen" name="imagen">
+        </div>
+
+        <div class="buttons-container">
+            <button type="submit">Guardar Artículo</button>
+            <button class="navegar" type="button" onclick="window.location.href='listado_articulos.html'">Ver Listado de Artículos</button>
+            <button class="navegar" type="button" onclick="window.location.href='dashboard.html'">Volver al Menú Principal</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: linear-gradient(lightblue, white, lightblue);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #326499;
+}
+
+input[type="text"], input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color:#326499;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #326499;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: lightblue;
+}
+
+.error {
+    color: purple;
+    margin-top: 10px;
+}
+
+.centered {
+    margin: 20px auto;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+.centered th, .centered td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.centered th {
+    background-color: #f8f8f8;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+}
+
+.password-container button {
+    width: auto;
+    margin-left: 10px;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    color: #326499;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightblue;
+}

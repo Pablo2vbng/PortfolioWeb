@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(lightblue, white, lightblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px lightblue;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+
+}
+.containerdashboard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px lightblue;
+    text-align: center;
+    max-width: 1200px;
+    margin-top: auto;
+    
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="password"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 45%;
+    right: 10px;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #326499;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: lightblue;
+}
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+    color: lightblue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration:solid;
+}
+
+button i {
+    margin-right: 5px;
+}
+
+.form-group{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#username{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.containerdashboard .ventas {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px lightblue;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    color: #326499;
+    cursor:pointer;
+    transition:0.5s;
+
+
+}
+.containerdashboard .ventas:hover {
+    background-color: lightblue;
+    width: 100%;
+}
+
+.containerdashboard .compras {
+    background-color:lightblue;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px lightblue;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    color: #326499;
+    cursor:pointer;
+    transition:0.5s;
+}
+.containerdashboard .compras:hover {
+    background-color: white;
+    width: 100%;
+}
+.containerdashboard .contabilidad {
+    background-color:#326499;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px lightblue;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    color: white;
+    cursor:pointer;
+    transition:0.5s;
+
+}
+.containerdashboard .contabilidad:hover {
+    background-color: lightblue;
+    width: 100%;
+}
+.containerdashboard .utilidades {
+    background-color:rgb(167, 77, 167);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px lightblue;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    color: white;
+    cursor:pointer;
+    transition:0.5s;
+
+}
+.containerdashboard .utilidades:hover {
+    background-color: rgb(199, 173, 199);
+    width: 100%;
+}

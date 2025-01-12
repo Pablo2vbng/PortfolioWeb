@@ -1,0 +1,102 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(lightblue, white, lightblue);
+    color: #333; /* Color de texto principal */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: black; /* Negro */
+    margin-top: 20px;
+}
+
+/* Estilos para formularios */
+form {
+    max-width: 100%;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical; /* Permitir redimensionamiento vertical en textarea */
+}
+
+select {
+    width: calc(100% - 2px); /* Ajustar el ancho para evitar desbordamiento horizontal */
+}
+
+button {
+    background-color: #326499; /* Azul */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+}
+
+button:hover {
+    background-color: lightblue; /* Azul más claro al pasar el ratón */
+}
+
+/* Estilos responsivos */
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+.navegar{
+    background-color: rgb(163, 92, 163);
+}

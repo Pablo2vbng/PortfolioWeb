@@ -1,0 +1,156 @@
+
+  body{
+    
+        width: 100%;
+        height: 100vh;
+        color: #fff;
+        background: -webkit-linear-gradient(45deg, black, green, black, green
+        , black, green, black, green
+        , black, green, black, green
+        , black, green, black, green
+        , black, green, black, green);
+        background-size: 400% 800%;
+        position: relative;
+        animation: animacionfondo 30s ease-in-out;
+    }
+
+* {
+    
+  font-family: "Bungee", sans-serif, ystem-ui;
+  }
+  
+  #main {
+    background-color: black;
+  }
+  .elige-personaje label input {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center ;
+  }
+
+
+  h1 {
+    color: white;
+    text-align: center;
+    animation: anim 1s infinite linear;
+    text-shadow: none;
+  
+  }
+  
+  h2,
+  h3 {
+    color: white;
+    text-align: center;
+ 
+  }
+  
+  li {
+    color: white;
+  }
+  
+  li li {
+    color: white;
+  }
+  
+  p > img {
+    border: 5px solid white;
+  }
+  
+  
+  form{
+    font-family: calibri;
+    text-align: center;
+}
+
+  audio{
+    text-align: center;
+  }
+
+  
+  button {
+    padding: 5px;
+    font: bold 0.6em sans-serif;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+    transform: rotate(-1.5deg);
+  }
+  
+  button:after {
+    content: " >>>";
+  }
+  
+  button:hover,
+  button:focus {
+    outline: none;
+    background: #000;
+    color: #fff;
+  }
+
+  .name  {
+    border-radius: 10px ;   
+  }
+  .number  {
+    border-radius: 10px;   
+  }
+  .email  {
+    border-radius: 10px; 
+  }
+  html {
+    cursor: url('C:\Users\pablo\Desktop\programacion\HTML Y CSS\PRACTICAS\img\SUPERMAN CURSOR 32 PX.png'), auto;
+   
+  } 
+  .superman{
+    max-width: 200px;
+  }
+
+  @keyframes animacionfondo {
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    0%{background-position: 50% 0;}
+    }
+    
+  @keyframes anim {
+    0%{
+      color: yellow;
+      text-shadow: none;
+    }
+    18%{
+      color: yellow;
+      text-shadow: none;
+    }
+    25%{
+      color: yellow;
+      text-shadow: 0 0 1vw lightyellow,
+      0 0 3vw black
+    }
+    30%{
+      color: yellow;
+      text-shadow: none;
+    }
+
+    35%{
+      color: yellow;
+      text-shadow: 0 0 1vw lightyellow,
+      0 0 3vw black
+    }
+  
+    70%{
+      color: yellow;
+      text-shadow: none;
+    }
+
+    85%{
+      color: yellow;
+      text-shadow: 0 0 1vw lightyellow,
+      0 0 3vw black
+    }
+    100%{
+      color: yellow;
+      text-shadow: none;
+    }
+     }
+
+    

@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="VideoLab1_UF6:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/VideoLab1_UF6_jar2</output-path>
+    <root id="archive" name="VideoLab1_UF6.jar">
+      <element id="module-output" name="VideoLab1_UF6" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.21.9/protobuf-java-3.21.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/formdev/flatlaf/3.0/flatlaf-3.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

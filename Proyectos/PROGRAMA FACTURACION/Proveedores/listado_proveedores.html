@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Proveedores</title>
+    <link rel="stylesheet" href="style_listado_proveedores.css">
+    <!-- Incluir jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Listado de Proveedores</h1>
+    <div id="searchContainer">
+        <input type="text" id="searchInput" placeholder="Buscar por Nombre, CIF o Población">
+        <button id="searchBtn">Buscar</button>
+    </div>
+    <table id="proveedoresTable">
+        <thead>
+            <tr>
+                <th>Nombre Fiscal</th>
+                <th>CIF/NIF</th>
+                <th>Nombre Comercial</th>
+                <th>Dirección</th>
+                <th>Código Postal</th>
+                <th>Población</th>
+                <th>Provincia</th>
+                <th>País</th>
+                <th>Teléfono</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="proveedoresBody">
+            <!-- Aquí se cargarán dinámicamente los proveedores -->
+        </tbody>
+    </table>
+
+    <div id="buttonsContainer">
+        <button class = "navegar" id="backToProveedoresBtn">Alta proveedores</button>
+        <button class = "navegar" id="backToDashboardBtn">Volver a menú principal</button>
+        <button type="button" id="printListPdfBtn">Imprimir Listado de Proveedores</button>
+    </div>
+
+    
+
+    <script src="jspdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
