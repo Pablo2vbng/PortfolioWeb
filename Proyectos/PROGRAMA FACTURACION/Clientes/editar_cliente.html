@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cliente</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <script src="scripts2.js" defer></script>
+    <script src="scriptprintpdf.js" defer></script>
+</head>
+<body>    
+    <form id="editClienteForm">
+        <h1>Editar Cliente</h1>
+        <fieldset>
+            <legend>Datos fiscales y comerciales</legend>
+            <label for="nombreFiscal">Nombre Fiscal:</label>
+            <input type="text" id="nombreFiscal" name="nombreFiscal" required>
+            <label for="cif">CIF/NIF:</label>
+            <input type="text" id="cif" name="cif" required>
+            <label for="nombreComercial">Nombre Comercial:</label>
+            <input type="text" id="nombreComercial" name="nombreComercial" required>
+            <label for="grupoTarifa">Grupo Tarifa Clientes:</label>
+            <select id="grupoTarifa" name="grupoTarifa" required>
+                <option value="netos">Netos</option>
+                <option value="netos+">Netos+</option>
+                <option value="PVPdto">PVPdto</option>
+            </select>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+            <label for="codigoPostal">Código Postal:</label>
+            <input type="text" id="codigoPostal" name="codigoPostal" required>
+            <label for="poblacion">Población:</label>
+            <input type="text" id="poblacion" name="poblacion" required>
+            <label for="provincia">Provincia:</label>
+            <input type="text" id="provincia" name="provincia" required>
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" required>
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required>
+            <label for="telefono2">Teléfono 2:</label>
+            <input type="text" id="telefono2" name="telefono2">
+            <label for="emailCompras">Correo electrónico Compras:</label>
+            <input type="email" id="emailCompras" name="emailCompras" required>
+            <label for="emailContabilidad">Correo electrónico Contabilidad:</label>
+            <input type="email" id="emailContabilidad" name="emailContabilidad" required>
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios"></textarea>
+            <label for="tipoIva">Tipo de Iva:</label>
+            <select id="tipoIva" name="tipoIva" required>
+                <option value="exento">Exento: 0%</option>
+                <option value="normal">Normal: 21%, 10%, 4%</option>
+                <option value="recargo">Recargo de equivalencia</option>
+            </select>
+            <label for="comercial">Comercial:</label>
+            <input type="text" id="comercial" name="comercial">
+            <label for="descuentoComercial">Descuento comercial:</label>
+            <input type="text" id="descuentoComercial" name="descuentoComercial">
+            <label for="descuentoProntoPago">Descuento pronto pago:</label>
+            <input type="text" id="descuentoProntoPago" name="descuentoProntoPago">
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos Bancarios</legend>
+            <label for="formaPago">Forma de pago:</label>
+            <select id="formaPago" name="formaPago" required>
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tarjeta bancaria</option>
+                <option value="giroVista">Giro a la vista</option>
+                <option value="giro30">Giro a 30 días</option>
+                <option value="giro60">Giro a 60 días</option>
+                <option value="pagare30">Pagaré a 30 días</option>
+                <option value="pagare60">Pagaré a 60 días</option>
+                <option value="transferenciaVista">Transferencia a la vista</option>
+                <option value="transferencia30">Transferencia a 30 días</option>
+                <option value="transferencia60">Transferencia a 60 días</option>
+            </select>
+            <label for="entidadBancaria">Entidad Bancaria:</label>
+            <input type="text" id="entidadBancaria" name="entidadBancaria">
+            <label for="iban">IBAN:</label>
+            <input type="text" id="iban" name="iban">
+            <label for="comentariosBancarios">Comentarios de datos Bancarios:</label>
+            <textarea id="comentariosBancarios" name="comentariosBancarios"></textarea>
+            <label for="bloquear">Bloquear:</label>
+            <input type="checkbox" id="bloquear" name="bloquear">
+            <label for="comentariosBloqueo">Comentarios:</label>
+            <textarea id="comentariosBloqueo" name="comentariosBloqueo"></textarea>
+        </fieldset>
+
+        <button type="submit">Guardar Cambios</button>
+        <button type="button" onclick="backToListadoClientes()">Volver al Listado de Clientes</button>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadClienteData();
+        });
+
+        function loadClienteData() {
+            let cliente = JSON.parse(localStorage.getItem('clienteEdit'));
+            if (cliente) {
+                document.getElementById('nombreFiscal').value = cliente.nombreFiscal;
+                document.getElementById('cif').value = cliente.cif;
+                document.getElementById('nombreComercial').value = cliente.nombreComercial;
+                document.getElementById('grupoTarifa').value = cliente.grupoTarifa;
+                document.getElementById('direccion').value = cliente.direccion;
+                document.getElementById('codigoPostal').value = cliente.codigoPostal;
+                document.getElementById('poblacion').value = cliente.poblacion;
+                document.getElementById('provincia').value = cliente.provincia;
+                document.getElementById('pais').value = cliente.pais;
+                document.getElementById('telefono').value = cliente.telefono;
+                document.getElementById('telefono2').value = cliente.telefono2;
+                document.getElementById('emailCompras').value = cliente.emailCompras;
+                document.getElementById('emailContabilidad').value = cliente.emailContabilidad;
+                document.getElementById('comentarios').value = cliente.comentarios;
+                document.getElementById('tipoIva').value = cliente.tipoIva;
+                document.getElementById('comercial').value = cliente.comercial;
+                document.getElementById('descuentoComercial').value = cliente.descuentoComercial;
+                document.getElementById('descuentoProntoPago').value = cliente.descuentoProntoPago;
+                document.getElementById('formaPago').value = cliente.formaPago;
+                document.getElementById('entidadBancaria').value = cliente.entidadBancaria;
+                document.getElementById('iban').value = cliente.iban;
+                document.getElementById('comentariosBancarios').value = cliente.comentariosBancarios;
+                document.getElementById('bloquear').checked = cliente.bloquear;
+                document.getElementById('comentariosBloqueo').value = cliente.comentariosBloqueo;
+            }
+        }
+
+        document.getElementById('editClienteForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            saveClienteData();
+        });
+
+        function saveClienteData() {
+            let clienteEdit = JSON.parse(localStorage.getItem('clienteEdit'));
+            let clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+
+            let updatedCliente = {
+                id: clienteEdit.id,
+                nombreFiscal: document.getElementById('nombreFiscal').value,
+                cif: document.getElementById('cif').value,
+                nombreComercial: document.getElementById('nombreComercial').value,
+                grupoTarifa: document.getElementById('grupoTarifa').value,
+                direccion: document.getElementById('direccion').value,
+                codigoPostal: document.getElementById('codigoPostal').value,
+                poblacion: document.getElementById('poblacion').value,
+                provincia: document.getElementById('provincia').value,
+                pais: document.getElementById('pais').value,
+                telefono: document.getElementById('telefono').value,
+                telefono2: document.getElementById('telefono2').value,
+                emailCompras: document.getElementById('emailCompras').value,
+                emailContabilidad: document.getElementById('emailContabilidad').value,
+                comentarios: document.getElementById('comentarios').value,
+                tipoIva: document.getElementById('tipoIva').value,
+                comercial: document.getElementById('comercial').value,
+                descuentoComercial: document.getElementById('descuentoComercial').value,
+                descuentoProntoPago: document.getElementById('descuentoProntoPago').value,
+                formaPago: document.getElementById('formaPago').value,
+                entidadBancaria: document.getElementById('entidadBancaria').value,
+                iban: document.getElementById('iban').value,
+                comentariosBancarios: document.getElementById('comentariosBancarios').value,
+                bloquear: document.getElementById('bloquear').checked,
+                comentariosBloqueo: document.getElementById('comentariosBloqueo').value,
+            };
+
+            let index = clientes.findIndex(cliente => cliente.id === clienteEdit.id);
+            if (index !== -1) {
+                clientes[index] = updatedCliente;
+            } else {
+                clientes.push(updatedCliente);
+            }
+
+            localStorage.setItem('clientes', JSON.stringify(clientes));
+            localStorage.removeItem('clienteEdit');
+            window.location.href = 'listado_clientes.html';
+        }
+
+        function backToListadoClientes() {
+            window.location.href = 'listado_clientes.html';
+        }
+    </script>
+</body>
+</html>

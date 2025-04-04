@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- MENU SUPERIOR -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Portfolio</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#init" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#about-me" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO WEB</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+                <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+    <!-- INICIO -->
+    <section id="init" class="init">
+        <div class="banner">
+            <div class="container-img">
+                <img src="img/Pablo Vidal.png" alt="">
+            </div>
+            <h1>Pablo Vidal</h1>
+            <h2>Desarrollador Web</h2>
+            <div class = "nets">
+                <a href = "https://www.facebook.com/profile.php?id=61556673560464"><i class="fa-brands fa-facebook"></i></a>
+                <a href = "https://www.linkedin.com/in/pablo-vidal-vidal-75613630b/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href = "https://www.instagram.com/proinvestingesp?utm_source=qr&igsh=MWR5NXNlZ29yOHVnaA=="><i class="fa-brands fa-instagram"></i></a>
+                <a href = "https://github.com/Pablo2vbng/PortafolioWeb"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+
+    </section>
+    <!-- SOBRE MI -->
+     <section id = "about-me" class ="about-me">
+        <div class = "section-content">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, Soy Pablo Vidal</span> Profesional con más de 20 años de experiencia en 
+                el sector comercial, especializado en ventas y diseño web. 
+                Poseo formación en HTML, CSS, Java, Wordpress, Prestashop y certificaciones en 
+                idiomas como el Inglés, Francés y Valenciano. Mi enfoque en la mejora continua 
+                e innovación me permite optimizar procesos y agregar valor. Busco nuevas oportunidades 
+                para aplicar mis conocimientos y habilidades.</p>
+
+                <div class ="row">
+                    <div class="col">
+                        <h3>Datos personales</h3>
+                        <ul>
+                            <li> 
+                                <strong>Nacimiento</strong>
+                                16/06/1983
+                            </li>
+                            <li> 
+                                <strong>Cargo</strong>
+                                Freelance
+                            </li>
+                            <li> 
+                                <strong>Teléfono</strong>
+                                670315792
+                            </li>
+                            <li> 
+                                <strong>Dirección</strong>
+                                C/Sol, 6 Beniganim 
+                            </li>
+                            <li> 
+                                <strong>Provincia</strong>
+                                Valencia
+                            </li>
+                            <li> 
+                                <strong>País</strong>
+                                España
+                            </li>   
+                            <li> 
+                                <strong>Github</strong>
+                                Pablo2vbng
+                            </li> 
+                            <li> 
+                                <strong>Email</strong>
+                                pablo2vbngdaw@gmail.com
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col">
+                        <h3>Skills</h3>
+                        <div class="interest-container">
+                            <div class = "interest">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <i class="fa-brands fa-html5"></i>
+                            </div>
+                            <div class = "interest">
+                                <span>SQL</span>
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <div class = "interest">
+                                <i class="fa-brands fa-aws"></i>
+                            </div>
+                            <div class = "interest">
+                                <span>JAVA</span>
+                                <i class="fa-brands fa-java"></i>
+                            </div>
+                         
+                        </div>
+                    </div>
+                </div>
+                <button>
+                    <a class="boton" href="Diplomas\Diplomas programación pdf.pdf">
+                    Descargar Certificados <i class="fa-solid fa-download"></i></a>
+                    <span class ="overlay"></span>
+                </button>
+        </div>
+     </section>
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Currículum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Diplomatura en CCEE</h4>
+                        <span class="casa">Universidad de Valencia</span>
+                        <span class="fecha">2000-2003</span>
+                        <p>Diplomado en Ciencas Empresariales por la Universidad de Valencia. 
+                            Estudios superiores en contabilidad, finanzas y marketing. 
+                            Especialidad en economía de la pequeña empresa. </p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Idiomas</h4>
+                        <span class="casa">Estudios</span>
+                        <span class="fecha">2005 - 2012</span>
+                        <p>  2010: Estudio de idiomas. Cambridge First Certificate English. Intermedio avanzado.</p>
+                        <p>  2015: Certificado B1 en francés. Institute Française.  Nivel intermedio.</p>
+                        <p>  2022: Certificado C2 Valenciano. Escuela Oficial de Idiomas. Nivel superior avanzado. </p> 
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Desarrolo web y programación</h4>
+                        <span class="casa">Estudiante Técnico superior Desarrollo Web</span>
+                        <span class="fecha">2024-2026</span>
+                        <p>Java, Desarrollo Web, HTML y CSS, AWS, Prestashop, Wordpress
+                            Contabilidad Empresarial, Sage Contaplus, Sage Facturaplus, Coreldraw 
+                        </p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Dpto contabilidad</h4>
+                        <span class="casa">Beniplast-Benitex, S.A.</span>
+                        <span class="fecha">2002-2003</span>
+                        <p>Trabajo en tareas administrativas. Contabilidad de costes. Contabilidad Financiera.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Dpto Ventas</h4>
+                        <span class="casa">CV Tools, S.L.</span>
+                        <span class="fecha">2003 - 2024</span>
+                        <p>Dirección comercial. Responsable de desarrollar y ejecutar la estrategia comercial de la empresa. 
+                            Supervisión de las actividades de ventas y marketing, la gestión de relaciones con los clientes, 
+                            la identificación de nuevas oportunidades de negocio y la maximización de los ingresos. </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Desarrollador Web</h4>
+                        <span class="casa">Freelance</span>
+                        <span class="fecha">2015-2024</span>
+                        <p>Responsable de diseñar, codificar y modificar sitios web, desde el layout hasta la función 
+                            y de acuerdo a las especificaciones del cliente </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECCION TITULO PORTFOLIO -->
+    <section class = "portfolio-tittle">
+        <h1>Portfolio</h1>
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        
+        <div class="banner">
+            <div class="container-img">
+                <img src="img/appweb.jpeg">
+            </div>
+            <h1>APPs</h1>
+            <h2>Js Html CSS Java Sql </h2>
+            <div class = "nets">
+                <a href = "index_portfolio_soluciones.html"> <i class="fa-solid fa-arrow-right"></i></a>
+                <a href = "https://github.com/Pablo2vbng/PortafolioWeb"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="container-img">
+                <img src="img/batman.jpeg">
+            </div>
+            <h1>Fandom Webs</h1>
+            <h2>JavaScript, HTML, CSS</h2>
+            <div class = "nets">
+                <a href = "index_portfolio_fanwebs.html"> <i class="fa-solid fa-arrow-right"></i></a>
+                <a href = "https://github.com/Pablo2vbng/PortafolioWeb"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="container-img">
+                <img src="img/web corporativa.png" alt="">
+            </div>
+            <h1>Web empresa</h1>
+            <h2>Prestashop, wordpress</h2>
+            <div class = "nets">
+                <a href = "index_porfolio_marketplaces.html"> <i class="fa-solid fa-arrow-right"></i></a>
+                <a href = "https://github.com/Pablo2vbng/PortafolioWeb"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>Contacto</h2>
+            <div class="fila" align="center">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" placeholder="Tu Nombre">
+                    <input type="text" placeholder="Número telefónico">
+                    <input type="text" placeholder="Dirección de correo">
+                    <input type="text" placeholder="Asunto">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>
+                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <!-- Mapa
+                <div class="col">
+                    <img src="img/ubicacion.png" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                C/Sol, 6, Benigànim (Valencia)
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Llámanos: +0034 670315792
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: pautools46@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                 -->
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <a href="#init" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=61556673560464"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href = "https://www.linkedin.com/in/pablo-vidal-vidal-75613630b/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href = "https://www.instagram.com/proinvestingesp?utm_source=qr&igsh=MWR5NXNlZ29yOHVnaA=="><i class="fa-brands fa-instagram"></i></a>
+            <a href = "https://github.com/Pablo2vbng/PortafolioWeb"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

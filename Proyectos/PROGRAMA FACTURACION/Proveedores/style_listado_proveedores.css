@@ -1,0 +1,155 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(lightblue, white, lightblue);
+    color: #333; /* Color de texto principal */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: black; /* Negro */
+    margin-top: 20px;
+}
+
+/* Estilos para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff; /* Blanco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Gris claro */
+}
+
+thead {
+    background-color: #326499; /* Azul */
+    color: #fff; /* Texto blanco */
+}
+
+/* Estilos responsivos */
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table, table tr, table td {
+        display: block;
+        
+    }
+
+    table tr {
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    table td {
+        text-align: center;
+        padding-left: 10px;
+        position: relative;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 45%;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .buscador {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .boton-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%; /* Full width on mobile */
+        margin: 5px 0;
+        text-align: center;
+    }
+}
+
+/* Estilos para botones */
+button {
+    background-color: #326499; /* Azul */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    max-width: 200px;
+    align-self: center;
+    
+}
+
+button:hover {
+    background-color: lightblue; /* Azul más claro al pasar el ratón */
+}
+
+.buscador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.buscador input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.buscador button {
+    flex: 0 0 auto;
+}
+.navegar{
+    background-color: rgb(163, 92, 163);
+}

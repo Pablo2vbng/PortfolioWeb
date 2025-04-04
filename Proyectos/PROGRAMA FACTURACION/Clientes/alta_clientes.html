@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta de Cliente</title>
+    <link rel="stylesheet" href="style_alta_clientes.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Alta de Cliente</h1>
+        <form id="clienteForm">
+            <fieldset class="fieldset">
+                <legend>Datos fiscales y comerciales</legend>
+                <label for="nombreFiscal">Nombre Fiscal:
+                    <input type="text" id="nombreFiscal" name="nombreFiscal" required>
+                </label>
+                <label for="cifNif">CIF/NIF:
+                    <input type="text" id="cifNif" name="cifNif" required>
+                </label>
+                <label for="nombreComercial">Nombre Comercial:
+                    <input type="text" id="nombreComercial" name="nombreComercial" required>
+                </label>
+                <label for="grupoTarifa">Grupo Tarifa Clientes:
+                    <select id="grupoTarifa" name="grupoTarifa" required>
+                        <option value="netos">Netos</option>
+                        <option value="netos+">Netos+</option>
+                        <option value="pvpdto">PVP dto</option>
+                    </select>
+                </label>
+                <label for="direccion">Dirección:
+                    <input type="text" id="direccion" name="direccion" required>
+                </label>
+                <label for="codigoPostal">Código Postal:
+                    <input type="text" id="codigoPostal" name="codigoPostal" required>
+                </label>
+                <label for="poblacion">Población:
+                    <input type="text" id="poblacion" name="poblacion" required>
+                </label>
+                <label for="provincia">Provincia:
+                    <input type="text" id="provincia" name="provincia" required>
+                </label>
+                <label for="pais">País:
+                    <input type="text" id="pais" name="pais" required>
+                </label>
+                <label for="telefono">Teléfono:
+                    <input type="text" id="telefono" name="telefono" required>
+                </label>
+                <label for="telefono2">Teléfono 2 (no obligatorio):
+                    <input type="text" id="telefono2" name="telefono2">
+                </label>
+                <label for="correoCompras">Correo electrónico Compras:
+                    <input type="email" id="correoCompras" name="correoCompras" required>
+                </label>
+                <label for="correoContabilidad">Correo electrónico Contabilidad:
+                    <input type="email" id="correoContabilidad" name="correoContabilidad" required>
+                </label>
+                <label for="comentarios">Comentarios:
+                    <textarea id="comentarios" name="comentarios"></textarea>
+                </label>
+                <label for="tipoIva">Tipo de IVA:
+                    <select id="tipoIva" name="tipoIva" required>
+                        <option value="exento">Exento</option>
+                        <option value="normal">Normal</option>
+                        <option value="recargo">Recargo de equivalencia</option>
+                    </select>
+                </label>
+                <label for="comercial">Comercial:
+                    <input type="text" id="comercial" name="comercial">
+                </label>
+                <label for="descuentoComercial">Descuento comercial:
+                    <input type="text" id="descuentoComercial" name="descuentoComercial">
+                </label>
+                <label for="descuentoProntoPago">Descuento pronto pago:
+                    <input type="text" id="descuentoProntoPago" name="descuentoProntoPago">
+                </label>
+            </fieldset>
+
+            <fieldset class="fieldset">
+                <legend>Datos Bancarios</legend>
+                <label for="formaPago">Forma de pago:
+                    <select id="formaPago" name="formaPago" required>
+                        <option value="efectivo">Efectivo</option>
+                        <option value="tarjeta">Tarjeta bancaria</option>
+                        <option value="giroVista">Giro a la vista</option>
+                        <option value="giro30">Giro a 30 días</option>
+                        <option value="giro60">Giro a 60 días</option>
+                        <option value="pagare30">Pagaré a 30 días</option>
+                        <option value="pagare60">Pagaré a 60 días</option>
+                        <option value="transferenciaVista">Transferencia a la vista</option>
+                        <option value="transferencia30">Transferencia a 30 días</option>
+                        <option value="transferencia60">Transferencia a 60 días</option>
+                    </select>
+                </label>
+                <label for="entidadBancaria">Entidad Bancaria:
+                    <input type="text" id="entidadBancaria" name="entidadBancaria">
+                </label>
+                <label for="iban">IBAN:
+                    <input type="text" id="iban" name="iban">
+                </label>
+                <label for="comentariosBancarios">Comentarios de datos Bancarios:
+                    <textarea id="comentariosBancarios" name="comentariosBancarios"></textarea>
+                </label>
+                <label for="bloqueo">Comentarios (Bloquear):
+                    <textarea id="bloqueo" name="bloqueo"></textarea>
+                </label>
+            </fieldset>
+
+            <div class="boton-container">
+                <button type="submit">Registrar Cliente</button>
+                <button class="navegar" type="button" id="listClientesBtn">Listado de Clientes</button>
+                <button class="navegar" type="button" id="backToDashboardBtn">Volver a Menú principal</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.pilares{
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.swiper {
+    width: 80%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent , #0002 , #0004);
+  }
+
+  

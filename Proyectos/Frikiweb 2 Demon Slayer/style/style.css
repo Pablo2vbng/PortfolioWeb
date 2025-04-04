@@ -1,0 +1,570 @@
+
+
+*{
+    box-sizing: border-box;
+    font-family: "Permanent Marker", cursive;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+ }
+
+ body{
+    font-family: "Permanent Marker", cursive;
+ }
+
+ .logo img{
+    width: 75px;
+ }
+
+ .titulo{
+    text-align: center;
+    color: white;
+    font-family: "Permanent Marker", cursive;
+    background: linear-gradient(to top, firebrick, #1c1c1c);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    height: 150px;
+ }
+ .titulo2{
+    text-align: center;
+    color: white;
+    font-family: "Permanent Marker", cursive;
+    background: linear-gradient(to top, firebrick, #1c1c1c);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    height: 100px;
+ }
+
+.contenedor-header{
+    background:linear-gradient(to top, #1c1c1c, firebrick);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header{
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo a{
+    font-family: "Permanent Marker", cursive;
+    font-size: 36px;
+    color: white;
+    text-decoration: none;
+}
+
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: white;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover{
+    color: black;
+
+}
+
+.nav-responsive{
+    background: linear-gradient(to top, #1c1c1c, firebrick);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    
+}
+
+/*Inicio*/
+
+.init {
+    background: linear-gradient(to top, #1c1c1c, firebrick),
+    url(img/PROTAGONISTAS.webp);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    max-height: 400px;
+}
+
+ /*PROTAGONISTAS*/
+ .protagonistas{
+    background: linear-gradient(to top, #1c1c1c, firebrick);
+    color:white ;
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.protagonistas h2{
+    font-size: 35px;
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+
+}
+
+
+
+/* SECCION CURRICULUM */
+.pilares{
+    background: linear-gradient(to top, #1c1c1c, firebrick);
+    color: #fff;
+    padding: 50px 20px;
+}
+.pilares .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.pilares h2{
+    font-size: 48px;
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+    padding: 20px 0;
+    color: rgba(30,35,38,.8)
+
+}
+.pilares .fila{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.pilares .fila .col{
+    width: 49%;
+    padding: 0 20px;
+    
+}
+.pilares .fila .col h3{
+    font-size: 28px;
+    font-family: "Comic", sans-serif;
+    margin-bottom: 25px;
+    color: rgba(30,35,38,.8);
+}
+.pilares .fila .izquierda{
+    border-right: 2px solid rgba(30,35,38,.8);
+}
+.pilares .fila .derecha{
+    border-left: 2px solid rgba(30,35,38,.8);
+}
+.pilares .fila .item{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: rgba(30,35,38,.8);
+    position: relative;
+    border-radius: 10px;
+}
+.pilares .fila .item h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.pilares .fila .item .casa{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+.pilares .fila .item .fecha{
+    display: block;
+    color: white;
+    margin-bottom: 10px;
+}
+.pilares .fila .item p{
+    line-height: 24px;
+}
+.pilares .fila .izq{
+    border-right: 2px solid rgba(30,35,38,.8);
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.pilares .fila .der{
+    border-left: 2px solid rgba(30,35,38,.8);
+    margin-left: 20px;
+    border-radius: 10px;
+}
+.pilares .fila .item .conectori{
+    height: 2px;
+    background-color: rgba(30,35,38,.8);
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    right: -47px;
+    z-index: 5;
+}
+.pilares .fila .item .conectori .circuloi{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgba(30,35,38,.8);
+    float: right;
+    position: relative;
+    bottom: 4px;
+}
+.pilares .fila .item .conectord{
+    height: 2px;
+    background-color: rgba(30,35,38,.8);
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    left: -47px;
+    z-index: 5;
+}
+.pilares .fila .item .conectord .circulod{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgba(30,35,38,.8);
+    float: left;
+    position: relative;
+    bottom: 4px;
+}
+/* SECCION PORTFOLIO */
+.portfolio-tittle{
+    background-color:#1c1c1c ;
+    text-align: center;
+    color: lightblue;
+    font-family: "Permanent Marker", cursive;
+    font-size: 32px;
+
+}
+.demonios {
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(to top, #1c1c1c, firebrick);
+    background-size: cover;
+    height: auto;
+    color: rgba(30,35,38,.8);
+    align-items: center;
+    min-height: 400px;
+}
+
+.demonios.banner{
+    padding: 20px;
+    background-color: white;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+    border-color: rgba(30,35,38,.8) ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.demonios.banner img{
+    margin-top: 50px;
+    border: 10px solid rgba(30,35,38,.8);
+    display: block;
+    width: 70%;
+    margin: auto;
+    border-radius: 100%;
+ }
+ .demonios .banner h1{
+    margin-top: 20px;
+    font-size: 35px;
+    font-family: "Permanent Marker", cursive;
+ }
+
+ .demonios .banner .nets a{
+    color: rgba(30,35,38,.8);
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid rgba(30,35,38,.8);
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+ }
+ .demonios .banner .nets a:hover{
+    background-color: white;
+ }
+
+
+/* SECCION CONTACTO */
+.seriepelis{
+    display:flex;
+    background-image: url(img/contact_bg.png);
+    background: linear-gradient(to top, #1c1c1c, firebrick);
+    color: rgba(30,35,38,.8);
+    padding: 50px 0;
+    color:white;
+    text-align: center;
+}
+.seriepelis .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+   text-align: center;
+    
+}
+.seriepelis h2{
+    font-size: 48px;
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+    padding: 20px 0;
+}
+.seriepelis .fila{
+    display: flex;
+    text-align: center;
+    
+}
+.seriepelis .col{
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    color: white;
+    align-items: center;
+}
+.seriepelis .col input, .contacto .col textarea{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: rgba(30,35,38,.8);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    border-color: rgba(30,35,38,.8);
+    text-align: center;
+}
+.seriepelis button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid rgba(30,35,38,.8);
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: rgba(30,35,38,.8);
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+.seriepelis button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    transition: 1s;
+}
+.seriepelis button:hover .overlay{
+    width: 100%;
+    color:rgba(30,35,38,.8);
+}
+.seriepelis .col img{
+    width: 100%;
+}
+.seriepelis .col .info{
+    position: absolute;
+    top: 40%;
+    background-color: rgba(30,35,38,.8);
+    padding: 20px;
+    max-width: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.seriepeliso .col .info ul{
+    list-style: none;
+}
+.seriepelis .col .info ul li{
+    margin-bottom: 20px;
+}
+.seriepelis .col .info ul li i{
+    color: rgba(30,35,38,.8);
+    display: inline-block;
+    margin-right: 20px;
+    text-align: center;
+}
+footer{
+    background: linear-gradient(to top, firebrick, #1c1c1c);
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 20px;
+}
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-color: rgba(30,35,38,.8);
+    border-style: double;
+    color: firebrick;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background: linear-gradient(to top, firebrick, #1c1c1c);
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){
+    .init .fila{
+        display: block;
+        width: fit-content;
+    }
+    .init .fila .col{
+        width: fit-content;
+    }
+
+    .protagonistas .fila{
+        display: block;
+    }
+    .protagonistas .fila .col{
+        width: 100%;
+    }
+    .protagonistas .fila .col .barra-skill{
+        width: 100%;
+    }
+
+    .pilares .fila{
+        display: block;
+    }
+    .pilares .fila .col{
+        width: 90%;
+    }
+    .pilares .fila .derecha{
+        margin-left: 20px;
+    }
+
+    .demonios .galeria{
+        display: block;
+        width: 100%;
+    }
+    .demonios .galeria .proyecto{
+        max-width: 100%;
+    }
+    .demonios .galeria .proyecto img{
+        width: 100%;
+    }
+    .seriepelis .fila{
+        display: block;
+    }
+    .seriepelis .fila .col{
+        width: 100%;
+    }
+}
+
+/* BANNER PORTFOLIO*/
+
+
+
+.slidersection{
+    background: linear-gradient(to top, grey, firebrick );
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.slider{
+    position: relative;
+    width: 400px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg)
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg)
+    }
+}
+
+.slider span{
+    position: aboslute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+}
+
+.slider span img{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 2s;
+}
+
+.slider span:hover img{
+    transform: translateY(-50px) scale(1.2);
+}

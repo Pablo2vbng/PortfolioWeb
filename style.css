@@ -1,0 +1,735 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');*/
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html{
+
+    scroll-behavior: smooth;
+}
+
+.contenedor-header{
+    background:rgba(30,35,38,.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header{
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo a{
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    color: lightblue;
+    text-decoration: none;
+}
+
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: white;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover{
+    color: lightblue;
+
+}
+
+.nav-responsive{
+    background-color: lightblue;
+    color: #1e2326;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    
+}
+
+/*Inicio*/
+
+.init {
+    background: linear-gradient(to top, rgba(119, 185, 223, 0.8), rgb(248, 248, 248)),
+    url(img/fondo.png);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.init .banner{
+    padding: 20px;
+    background-color: rgba(30,35,38,.8);
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+.init .banner img{
+    margin-top: 50px;
+    border: 10px solid lightblue;
+    display: block;
+    width: 70%;
+    margin: auto;
+    border-radius: 100%;
+ }
+ .init .banner h1{
+    margin-top: 20px;
+    font-size: 35px;
+    font-family: "Poppins", sans-serif;
+ }
+
+ .init .banner .nets a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+ }
+ .init .banner .nets a:hover{
+    background-color: lightblue;
+ }
+
+ 
+/*SECCIÓN ABOUT ME*/
+
+ .about-me{
+    background-color: rgba(30,35,38,.8);
+    color:white ;
+    padding: 50px 20px;
+}
+.about-me .section-content{
+    max-width: 1100px;
+    margin: auto;
+}
+.about-me h2{
+    font-size: 35px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    color: lightblue
+
+}
+.about-me .section-content p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.about-me .section-content p span{
+    color: lightblue;
+    font-weight: bold;
+}
+.about-me .row{
+    display: flex;
+}
+.about-me .row .col
+{
+    width: 50%;
+}
+.about-me .row  .col h3{
+    font-size: 28px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 25px;
+    color: lightblue;
+}
+.about-me .row  .col ul{
+    list-style: none;
+}
+.about-me .row .col ul li{
+    margin: 12px 0;
+}
+.about-me .row  .col ul li strong{
+    display: inline-block;
+    color: lightblue;
+    width: 130px;
+}
+.about-me .row  .col ul li span{
+    background-color: lightblue;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.about-me .row  .col .interest-containers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+.about-me .row  .col .interest-container .interest{
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+    transition: .3s;
+}.about-me .row  .col .interest-container .interest:hover{
+    background-color: lightblue;
+}
+.about-me .row  .col .interest-container .interest i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.about-me button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid white;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+.about-me button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: lightblue;
+    z-index: -1;
+    transition: 1s;
+}
+.about-me button:hover .overlay{
+    width: 100%;
+     }
+.about-me {
+    background-color: rgba(30,35,38,.8);
+    color: white;
+    padding: 50px 20px;
+}
+.about-me .section-content{
+    max-width: 1100px;
+    margin: auto;
+}
+.about-me h2{
+    font-size: 48px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 20px 0;
+
+}
+.about-me .section-content p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.about-me .section-content p span{
+    color: lightblue;
+    font-weight: bold;
+}
+.about-me .row {
+    display: flex;
+}
+.about-me .row .col
+{
+    width: 50%;
+}
+.about-me .row .col h3{
+    font-size: 28px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 25px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.about-me .row  .col ul{
+    list-style: none;
+    margin-left: 2px;
+    margin-right: 2px;
+}v
+.about-me .row  .col ul li{
+    margin: 12px 0;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.about-me .row  .col ul li strong{
+    display: inline-block;
+    color: lightblue;
+    width: 130px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.about-me .row  .col ul li span{
+    background-color: lightblue;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.about-me .row  .col .interest-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.about-me .row  .col .interest-container .interest{
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}.about-me .row  .col .interest-container .interest:hover{
+    background-color: lightblue;
+}
+.about-me .row  .col .interest-container .interest i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.about-me button{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid white;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: white;
+    position: relative;
+    z-index: 10;
+   
+}
+.about-me button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: lightblue;
+    z-index: -1;
+    transition: 1s;
+}
+.about-me button:hover .overlay{
+    width: 100%;
+}
+.boton{
+    text-decoration: none;
+    color:white;
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+/* SECCION CURRICULUM */
+.curriculum{
+    background-color: lightblue;
+    color: #fff;
+    padding: 50px 20px;
+}
+.curriculum .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.curriculum h2{
+    font-size: 48px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    color: rgba(30,35,38,.8)
+
+}
+.curriculum .fila{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.curriculum .fila .col{
+    width: 49%;
+    padding: 0 20px;
+    
+}
+.curriculum .fila .col h3{
+    font-size: 28px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 25px;
+    color: rgba(30,35,38,.8);
+}
+.curriculum .fila .izquierda{
+    border-right: 2px solid rgba(30,35,38,.8);
+}
+.curriculum .fila .derecha{
+    border-left: 2px solid rgba(30,35,38,.8);
+}
+.curriculum .fila .item{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: rgba(30,35,38,.8);
+    position: relative;
+    border-radius: 10px;
+}
+.curriculum .fila .item h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.curriculum .fila .item .casa{
+    color: lightblue;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+.curriculum .fila .item .fecha{
+    display: block;
+    color: lightblue;
+    margin-bottom: 10px;
+}
+.curriculum .fila .item p{
+    line-height: 24px;
+}
+.curriculum .fila .izq{
+    border-right: 2px solid rgba(30,35,38,.8);
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.curriculum .fila .der{
+    border-left: 2px solid rgba(30,35,38,.8);
+    margin-left: 20px;
+    border-radius: 10px;
+}
+.curriculum .fila .item .conectori{
+    height: 2px;
+    background-color: rgba(30,35,38,.8);
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    right: -47px;
+    z-index: 5;
+}
+
+
+.curriculum .fila .item .conectori .circuloi{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgba(30,35,38,.8);
+    float: right;
+    position: relative;
+    bottom: 4px;
+}
+.curriculum .fila .item .conectord{
+    height: 2px;
+    background-color: rgba(30,35,38,.8);
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    left: -47px;
+    z-index: 5;
+}
+.curriculum .fila .item .conectord .circulod{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgba(30,35,38,.8);
+    float: left;
+    position: relative;
+    bottom: 4px;
+}
+/* SECCION PORTFOLIO */
+.portfolio-tittle{
+    background-color:rgba(30,35,38,.8) ;
+    text-align: center;
+    color: lightblue;
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+
+}
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(30,35,38,.8);
+    background-size: cover;
+    height: auto;
+    color: rgba(30,35,38,.8);
+    align-items: center;
+}
+
+.portfolio .banner{
+    padding: 20px;
+    background-color: lightblue;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+    border-color: rgba(30,35,38,.8) ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.portfolio .banner img{
+    margin-top: 50px;
+    border: 10px solid rgba(30,35,38,.8);
+    display: block;
+    width: 70%;
+    margin: auto;
+    border-radius: 100%;
+ }
+ .portfolio .banner h1{
+    margin-top: 20px;
+    font-size: 35px;
+    font-family: "Poppins", sans-serif;
+ }
+
+ .portfolio .banner .nets a{
+    color: rgba(30,35,38,.8);
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid rgba(30,35,38,.8);
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+ }
+ .portfolio .banner .nets a:hover{
+    background-color: white;
+ }
+
+
+/* SECCION CONTACTO */
+.contacto{
+    display:flex;
+    background-image: url(img/contact_bg.png);
+    background-color: lightblue;
+    color: rgba(30,35,38,.8);
+    padding: 50px 0;
+    color:white;
+    text-align: center;
+}
+.contacto .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+   text-align: center;
+    
+}
+.contacto h2{
+    font-size: 48px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 20px 0;
+}
+.contacto .fila{
+    display: flex;
+    text-align: center;
+    
+}
+.contacto .col{
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    color: white;
+    align-items: center;
+}
+.contacto .col input, .contacto .col textarea{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: rgba(30,35,38,.8);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    border-color: rgba(30,35,38,.8);
+    text-align: center;
+}
+.contacto button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid rgba(30,35,38,.8);
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: rgba(30,35,38,.8);
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+.contacto button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: lightblue;
+    z-index: -1;
+    transition: 1s;
+}
+.contacto button:hover .overlay{
+    width: 100%;
+    color:rgba(30,35,38,.8);
+}
+.contacto .col img{
+    width: 100%;
+}
+.contacto .col .info{
+    position: absolute;
+    top: 40%;
+    background-color: rgba(30,35,38,.8);
+    padding: 20px;
+    max-width: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contacto .col .info ul{
+    list-style: none;
+}
+.contacto .col .info ul li{
+    margin-bottom: 20px;
+}
+.contacto .col .info ul li i{
+    color: rgba(30,35,38,.8);
+    display: inline-block;
+    margin-right: 20px;
+    text-align: center;
+
+    /*SECCION FOOTER*/
+}
+footer{
+    background-color: rgba(30,35,38,.8);
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 20px;
+}
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: lightblue;
+    border-color: rgba(30,35,38,.8);
+    border-style: double;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
+    }
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
+
+    .curriculum .fila{
+        display: block;
+    }
+    .curriculum .fila .col{
+        width: 90%;
+    }
+    .curriculum .fila .derecha{
+        margin-left: 20px;
+    }
+
+    .portfolio .galeria{
+        display: block;
+        width: 100%;
+    }
+    .portfolio .galeria .proyecto{
+        max-width: 100%;
+    }
+    .portfolio .galeria .proyecto img{
+        width: 100%;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+    }
+}
+
+/* BANNER PORTFOLIO*/
