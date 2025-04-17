@@ -118,6 +118,14 @@
                                 <span>JAVA</span>
                                 <i class="fa-brands fa-java"></i>
                             </div>
+                            <div class = "interest">
+                                <span>Python</span>
+                                <i class="fa-brands fa-python"></i>
+                            </div>
+                            <div class = "interest">
+                                <span></span>
+                                <i class="fa-brands fa-js"></i>
+                            </div>
                          
                         </div>
                     </div>
@@ -251,41 +259,22 @@
         <div class="contenido-seccion">
             <h2>Contacto</h2>
             <div class="fila" align="center">
-                <!-- Formulario -->
-                <div class="col">
-                    <input type="text" placeholder="Tu Nombre">
-                    <input type="text" placeholder="Número telefónico">
-                    <input type="text" placeholder="Dirección de correo">
-                    <input type="text" placeholder="Asunto">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <button>
-                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
-                        <span class="overlay"></span>
-                    </button>
-                </div>
-                <!-- Mapa
-                <div class="col">
-                    <img src="img/ubicacion.png" alt="">
-                    <div class="info">
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-location-dot"></i>
-                                C/Sol, 6, Benigànim (Valencia)
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-mobile-screen"></i>
-                                Llámanos: +0034 670315792
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-envelope"></i>
-                                Email: pautools46@gmail.com
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                 -->
+              <!-- Formulario -->
+              <div class="col">
+                <form action="mailto:pablo2vbngdaw@gmail.com" method="post" enctype="text/plain">
+                  <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                  <input type="text" name="telefono" placeholder="Número de teléfono" required>
+                  <input type="email" name="correo" placeholder="E-mail" required>
+                  <input type="text" name="asunto" placeholder="Asunto" required>
+                  <textarea name="mensaje" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+                  <button type="submit">
+                    Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                    <span class="overlay"></span>
+                  </button>
+                </form>
+              </div>
             </div>
-        </div>
+          </div>
     </section>
     <!-- footer -->
     <footer>
