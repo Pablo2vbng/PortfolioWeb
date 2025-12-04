@@ -103,7 +103,7 @@ body {
 }
 @media (max-width: 36rem) {
   .introducing-section-img__avatar {
-    max-width: 8rem;
+    max-width: 6rem;
   }
 }
 .introducing-section-img__arrow {
@@ -142,7 +142,7 @@ body {
 }
 @media (max-width: 36rem) {
   .introducing-section-text-title__p_color {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 .introducing-section-text-title__s_color {
@@ -155,7 +155,7 @@ body {
 }
 @media (max-width: 36rem) {
   .introducing-section-text-title__s_color {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 .introducing-section-text-subtitle__p_color {
