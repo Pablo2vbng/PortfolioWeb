@@ -155,7 +155,7 @@ body {
 }
 @media (max-width: 36rem) {
   .introducing-section-text-title__s_color {
-    font-size: 1rem;
+    font-size: 1, 1rem;
   }
 }
 .introducing-section-text-subtitle__p_color {
