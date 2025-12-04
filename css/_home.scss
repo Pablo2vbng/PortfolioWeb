@@ -1,0 +1,197 @@
+@use 'vars';
+@use 'mixins';
+@use 'general';
+
+/* ***INTRODUCING*** */
+.introducing{
+    &-section {
+        display:flex;
+        &-img__avatar{
+            max-width: 15rem;
+            position: relative;
+            left: 9%;
+            top: 21%;
+            padding-top: 11%;
+            @media(max-width:36rem){
+                max-width: 8rem;
+            }
+        }
+        &-img__arrow{
+            max-width: 10rem;
+            position: relative;
+            left: -15%;
+            top: 2%;
+            @media(max-width:36rem){
+                max-width: 5rem;
+            }
+        }
+        &-text{
+            position:relative;
+            margin-top: 3%;
+
+            &__p_color{
+                color:var(--primary-text-color);
+            }
+            &__s_color{
+                color:var(--secundary-text-color);
+            }
+            @media(max-width:36rem){
+                font-size: 0.6rem;
+            }
+            &-title{
+                &__p_color{
+                    color:var(--primary-text-color);
+                    @media(max-width:54rem){
+                        font-size: 1,5rem;
+                    }
+                    @media(max-width:36rem){
+                        font-size: 1.2rem;
+                    }
+                }
+                &__s_color{
+                    color:var(--secundary-text-color);
+                    @media(max-width:54rem){
+                        font-size: 1,5rem;
+                    }
+                    @media(max-width:36rem){
+                        font-size: 1.2rem;
+                    }
+                }
+               
+            }
+    
+            &-subtitle{
+                &__p_color{
+                    color:var(--primary-text-color)
+                }
+            }
+        }
+        &-description{
+            margin-top: 2rem;
+            padding: 2rem;
+            border: 0.15rem solid var(--secundary-text-color);
+            border-radius: 0.5rem;
+            margin: 1rem;
+            &-subtitle__s_color{
+                color:var(--secundary-text-color);
+            }
+        }
+    }
+}
+
+/* ***CAREER*** */
+
+.career{
+    position:relative;
+    display:block;
+    &-tittle__s_color{
+        @include mixins.section_title();
+    }
+    &-cards{
+        margin:2rem;
+        flex-wrap:wrap;
+        z-index:1;
+        &-card{
+            max-width: 45%;
+            margin:0.5rem;
+            border: 0.0625rem solid var(--secundary-text-color);
+            @media(max-width: 48rem){
+                max-width: 100%;
+            }
+            &-body{
+                &-title__p_color{
+                    color:var(--primary-text-color);
+                }
+                &-subtitle__p_color{
+                    color:var(--primary-text-color);
+                }
+                &-link__s_color{
+                    @include mixins.buttons();
+                }
+                &-link__s_color:hover{
+                    @include mixins.buttons-hover();
+                }
+            }
+        }
+    }
+}
+
+
+/* ***BACK RADIAL*** */
+
+.back-radial {
+    position: absolute; 
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 21.8750rem; 
+    height: 21.8750rem; 
+    background: radial-gradient(circle, var(--primary-text-color) 0%, rgba(255,255,255,0) 70%);
+    z-index: 0; 
+    opacity: 0.6; 
+    pointer-events: none; 
+    @media (max-width: 32rem){
+        top:190%;
+    }
+}
+/* ***TECH*** */
+
+.tech{
+    &-tittle__s_color{
+        @include mixins.section_title();
+    }
+    &-img{
+        flex-wrap:wrap;
+        gap:1rem;
+        padding-top:0.3750rem;
+        &-item{
+            max-width: 3rem;
+            transition: transform 0.5s ease; 
+            &:hover{
+                transform: scale(1.2); 
+            }
+        }
+    }  
+}
+
+.contact{
+    margin:0 auto;
+    &-tittle__s_color{
+        @include mixins.section_title();
+    }
+    &-form{
+        max-width: 37.5000rem; 
+        width: 80%;
+        margin: 0 auto; 
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem; 
+        &-item{
+            display: flex;
+            justify-content: space-between;
+            &-label{
+                padding-right: 1.2500rem;
+            }
+            &-input{
+                width: 80%;
+                border: 0.0625rem solid var(--secundary-text-color);
+                border-radius: 0.3125rem;
+                color: var(--primary-text-color)
+            }
+        }
+        &-terms-label-link{
+            @include mixins.link();
+            &:hover{
+                @include mixins.link-hover();
+            }
+        }
+        &-button{
+            @include mixins.buttons();
+            color:black;
+            &:hover{
+                @include mixins.buttons-hover();
+            }
+        }
+
+    }
+}

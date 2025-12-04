@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espacio</title>
+    <!-- NASA GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+    <!-- END NASA GOOGLE FONTS -->
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- BOOTSTRAP CORREGIDO-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="nasa-header">
+        <nav class="nasa-header-nav navbar navbar-expand-lg bg-body-tertiary">
+            <div class="nasa-header-nav container-fluid container-fluid flex-style" data-bs-theme="dark">
+                <a class=" nasa-header-nav__logo navbar-brand" href="#">NASA</a>
+                <button class=" nasa-header-nav__toggler navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nasa-header-nav-list navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nasa-header-nav-list-item nav-item">
+                            <a class="nasa-header-nav-list-item__white nav-link" href="#career">PortfolioWeb</a>
+                        </li>
+                        <li class="nasa-header-nav-list-item nav-item">
+                            <a class="nasa-header-nav-list-item__white nav-link" href="#contact">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- END HEADER -->
+    <!-- VIDEO -->
+    <div>
+        <video class="video-background" autoplay muted loop playsinline>
+            <source src="src/video/background.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!-- END VIDEO -->
+    <!-- MAIN CONTAINER -->
+    <div class="main-container">
+        <!-- CARD FIN DEL MUNDO -->
+        <div class="end-of-the-world-card ">
+            <h5 class=" end-of-the-world-card__title ">NASA</h5>
+            <p class=" end-of-the-world-card__text "> Monitoreamos rocas espaciales gigantes para decirte si el
+                apocalipsis está cerca.</p>
+            <p class=" end-of-the-world-card__text ">Última decepción: Hace 5 minutos (seguimos vivos).</p>
+            <button href="apocalipsis.html" target="_blank" class="end-of-the-world-card__button">
+                <i class="bi bi-radioactive"></i> Recibir informe
+            </button>
+        </div>
+        <!-- END CARD FIN DEL MUNDO -->
+        <!-- TODOLIST  -->
+        <div class="to-do-list">
+            <h2 class="to-do-list-title">COSAS QUE HACER Antes del fin del mundo</h2>
+            <div>
+                <form class="to-do-list-form" ID="to-do-list-form" method="post" enctype="multipart/form-data">
+                    <input type="text" class="to-do-list-form__input" id="to-do-list-form__input"
+                        placeholder="Cosas a hacer...">
+                    <button type="submit" class="to-do-list-form__submit-btn" id="to-do-list__submit-btn">AÑADIR <i
+                            class="bi bi-rocket-takeoff"></i></button>
+                </form>
+            </div>
+            <div>
+                <ul class="to-do-list-ul" id="to-do-list-ul">
+                </ul>
+            </div>
+        </div>
+        <!-- END TODOLIST -->
+    </div>
+    <!-- END MAIN CONTAINER -->
+    <!-- FOOTER -->
+    <div class="footer flex-style">
+        <div class="footer-allrights">
+            <p class="footer-allrights__p_color">© 2025 Pablo Vidal Vidal.</p>
+        </div>
+        <div class="footer-icons">
+            <a class="footer-icons-item-link" href="#" target="_blank"><span><i
+                        class="footer-icons-item-logo bi bi-linkedin"></i></span></a>
+            <a class="footer-icons-item-link" href="#" target="_blank"><span><i
+                        class="footer-icons-item-logo bi bi-github"></i></span></a>
+        </div>
+    </div>
+    <!-- END FOOTER -->
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!--SCRIPT -->
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

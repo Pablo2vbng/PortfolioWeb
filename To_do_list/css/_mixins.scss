@@ -1,0 +1,32 @@
+@use 'vars';
+
+
+@mixin buttons{
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--btn-text-color);
+    border:0.0625rem solid var(--btn-border-color);
+    border-radius: 0.3125rem;
+    padding: 0.3125rem;
+   
+}
+
+@mixin buttons-hover{
+    background-color: var(--btn-bg-color-hover);
+    color: var(--btn-text-color-hover);
+}
+
+@mixin link{
+    color:var(--primary-text-color);
+    border-top: 0.0625rem solid var(--primary-text-color);
+    text-decoration: none;
+    list-style: none;
+    border:none;
+}
+
+@mixin link-hover{
+    color: var(--secundary-text-color); 
+    text-decoration: none;
+    list-style: none;
+    border:none;
+}

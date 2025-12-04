@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+}
+
+.flex-style {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+/* ***VARIABLES*** */
+:root {
+  --primary-text-color: #ffffff ;
+  --secundary-text-color:black ;
+  --btn-text-color: white ;
+  --btn-border-color:white ;
+  --btn-bg-color-hover: white;
+  --btn-border-color-hover:black;
+}
+
+/* ***ESTILOS HEADER*** */
+.nasa-header-nav {
+  position: fixed;
+  top: 0;
+  background-color: transparent;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.nasa-header-nav__toggler {
+  border: none;
+}
+.nasa-header-nav__toggler:hover {
+  background-color: var(--secundary-text-color);
+  border: none;
+}
+.nasa-header-nav__logo {
+  color: var(--primary-text-color);
+}
+.nasa-header-nav__logo:hover {
+  color: var(--secundary-text-color);
+}
+.nasa-header-nav-list-item__white {
+  color: var(--primary-text-color);
+  border-top: 0.0625rem solid var(--primary-text-color);
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  align-items: right;
+}
+.nasa-header-nav-list-item__white:hover {
+  color: var(--secundary-text-color);
+  text-decoration: none;
+  list-style: none;
+  border: none;
+}
+
+.navbar-expand-lg {
+  color: var(--primary-text-color);
+}
+
+.navbar-toggler-icon {
+  background-color: var(--nav-bg-color);
+}
+
+.navbar-toggler {
+  padding: 0;
+  border: none;
+}
+
+.nasa-header-nav .navbar-toggler:focus,
+.nasa-header-nav .navbar-brand:focus,
+.nasa-header-nav .nav-link:focus {
+  outline: none;
+  border-color: var(--primary-text-color);
+  box-shadow: 0 0 0 0.125rem var(--secundary-text-color);
+  color: var(--secundary-text-color);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer-allrights__p_color {
+  color: var(--primary-text-color);
+}
+.footer-icons-item-logo {
+  color: var(--primary-text-color);
+}
+.footer-icons-item-logo:hover {
+  color: var(--secundary-text-color);
+}
+
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rem;
+  position: relative;
+  margin-top: 9.375rem;
+  margin-bottom: 6.25rem;
+  justify-content: center;
+}
+@media (max-width: 48rem) {
+  .main-container {
+    top: 100%;
+    gap: 2rem;
+  }
+}
+
+.end-of-the-world-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+}
+@media (max-width: 48rem) {
+  .end-of-the-world-card {
+    max-width: 80%;
+  }
+}
+.end-of-the-world-card__title {
+  color: var(--primary-text-color);
+  font-size: 7rem;
+}
+@media (max-width: 48rem) {
+  .end-of-the-world-card__title {
+    font-size: 5rem;
+  }
+}
+.end-of-the-world-card__text {
+  color: var(--primary-text-color);
+  font-size: 1.1rem;
+}
+.end-of-the-world-card__button {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--btn-text-color);
+  border: 0.0625rem solid var(--btn-border-color);
+  border-radius: 0.3125rem;
+  padding: 0.3125rem;
+  max-width: 12rem;
+}
+.end-of-the-world-card__button:hover {
+  background-color: var(--btn-bg-color-hover);
+  color: var(--btn-text-color-hover);
+}
+
+.to-do-list {
+  z-index: 1;
+  max-width: 40%;
+  padding-top: 1.875rem;
+}
+@media (max-width: 48rem) {
+  .to-do-list {
+    max-width: 80%;
+  }
+}
+.to-do-list-form {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+.to-do-list-form__input {
+  padding: 0.3125rem;
+  border-radius: 0.3125rem;
+  border: none;
+  margin-right: 1rem;
+}
+.to-do-list-form__submit-btn {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--btn-text-color);
+  border: 0.0625rem solid var(--btn-border-color);
+  border-radius: 0.3125rem;
+  padding: 0.3125rem;
+}
+.to-do-list-form__submit-btn:hover {
+  background-color: var(--btn-bg-color-hover);
+  color: var(--btn-text-color-hover);
+}
+.to-do-list-title {
+  color: var(--primary-text-color);
+}
+.to-do-list-ul {
+  list-style: none;
+}
+.to-do-list-ul__li {
+  display: flex;
+  gap: 1rem;
+  color: var(--primary-text-color);
+  padding-top: 1rem;
+}
+.to-do-list-ul__li-btn {
+  border-radius: 50%;
+  padding-right: 0.3125rem;
+  padding-left: 0.3125rem;
+  color: var(--primary-text-color);
+  border: 1px solid var(--primary-text-color);
+  background-color: transparent;
+}
+.to-do-list-ul__li-btn:hover {
+  background-color: var(--primary-text-color);
+  color: var(--secundary-text-color);
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,40 @@
+@use 'vars';
+
+@mixin section_title{
+    color:var(--primary-text-color);
+    text-align: center;
+    font-style:inherit;
+    padding:3rem;
+    text-decoration: underline;
+    text-decoration-color:var(--secundary-text-color);
+}
+
+@mixin buttons{
+    background-color: var(--btn-bg-color);
+    text-decoration: none;
+    color: var(--secundary-text-colorr);
+    border:0.0625rem solid var(--secundary-text-color);
+    border-radius: 0.3125rem;
+    padding:0.3rem;
+    margin-bottom:0.0938rem;
+}
+
+@mixin buttons-hover{
+    background-color: var(--secundary-text-color);
+    color: var(--btn-text-color);
+}
+
+@mixin link{
+    color:var(--primary-text-color);
+    border-top: 0.0625rem solid var(--primary-text-color);
+    text-decoration: none;
+    list-style: none;
+    border:none;
+}
+
+@mixin link-hover{
+    color: var(--secundary-text-color); 
+    text-decoration: none;
+    list-style: none;
+    border:none;
+}

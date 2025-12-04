@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>PortfolioWeb</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="portfolio-header">
+        <nav class="portfolio-header-nav navbar navbar-expand-lg bg-body-tertiary">
+            <div class="portfolio-header-nav container-fluid container-fluid flex-style" data-bs-theme="dark">
+                <!-- LOGO O TITULO -->
+                <a class=" portfolio-header-nav__logo navbar-brand" href="#">PortFolioWeb</a>
+                <!-- BOTON HAMBURGUESA -->
+                <button class=" portfolio-header-nav__toggler navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- LISTA NAVEGACIÓN -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="portfolio-header-nav-list navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="portfolio-header-nav-list-item nav-item">
+                            <a class="portfolio-header-nav-list-item__white nav-link" href="#career">Proyectos</a>
+                        </li>
+                        <li class="portfolio-header-nav-list-item nav-item">
+                            <a class="portfolio-header-nav-list-item__white nav-link" href="#contact">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- END HEADER -->
+    <!-- INTRODUCIONG SECTION -->
+    <div class="introducing">
+        <div class="introducing-section">
+            <div></div>
+            <div class="introducing-section-img">
+                <img class="introducing-section-img__avatar" src="src/img/face_mac.png" alt="avatar-img">
+            </div>
+            <div class="introducing-section-img">
+                <img class="introducing-section-img__arrow" src="src/img/arrow.png" alt="arrow-img">
+            </div>
+            <div class="introducing-section-text">
+                <p class="introducing-section-text__p_color">Hola, mi nombre es <strong
+                        class="introducing-section-text__s_color">Pablo Vidal</strong></p>
+                <h1 class="introducing-section-text-title__p_color"><strong>DESARROLLADOR</strong></h1>
+                <h2 class="introducing-section-text-title__s_color">WEB</h2>
+                <p class="introducing-section-text-subtitle__p_color">FullStack Developer</p>
+            </div>
+        </div>
+        <div class="introducing-section">
+            <div class="introducing-section-description">
+                <H2 class="introducing-section-description-title__p_color">PROYECTOS WEB A MEDIDA</H2>
+                <H3 class="introducing-section-description-subtitle__p_color">SOLUCIONES MODERNAS PARA
+                    <strong class="introducing-section-description-subtitle__s_color">PYMES Y AUTÓNOMOS</strong>
+                </H3>
+                <P>Ser autónomo o gestionar una Pyme ya es bastante difícil como para tener que preocuparse por
+                    servidores, código y diseño. Te ayudamos a ganar y afianzar clientes cada día.</P>
+            </div>
+        </div>
+    </div>
+
+    <!-- END INTRODUCIONG SECTION -->
+    <!-- CAREER SECTION -->
+    <div class="career" id="career">
+        <h2 class="career-tittle__s_color"><strong>PROYECTOS</strong></h2>
+        <div class="career-cards flex-style">
+            <div class=" career-cards-card card ">
+                <img src="src/img/projects/Portal-Comercial-CV-Tools.jpg" class="career-cards-card__img card-img-top"
+                    alt="Portal-del-Comercial-CVTools">
+                <div class="career-cards-card-body card-body">
+                    <h5 class="career-cards-card-body-title__p_color card-title">Portal herramientas Red Comercial</h5>
+                    <p class="card-text career-cards-card-body-subtitle__p_color">Aplicación web para facilitar datos,
+                        stocks,
+                        presupuestos, altas de cliente. Gestión comercial personalizada de empresa.
+                    </p>
+                    <a class="career-cards-card-body-link__s_color "
+                        href="https://cvtoolssl.github.io/Red_Comercial/">Entra en la APP</a>
+                    <p class="card-text career-cards-card-body-subtitle__p_color card-text"><small
+                            class="career-cards-card-body-subtitle__s_color">Desarrollada en Vanilla JS</small></p>
+                </div>
+            </div>
+            <div class=" career-cards-card card ">
+                <img src="src/img/projects/Automatizacion-Nasa_AWS.jpg" class="career-cards-card__img card-img-top"
+                    alt="...">
+                <div class="career-cards-card-body card-body">
+                    <h5 class="career-cards-card-body-title__p_color card-title">Automatización AWS</h5>
+                    <p class="card-text career-cards-card-body-subtitle__p_color">Pasos a seguir en AWS para
+                        hacer una llamada a la API de la Nasa y que nos devuelva un html con el nivel de peligrosidad de
+                        objetos que avistamos
+                        en el Sistema Solar
+                    </p>
+                    <a class="career-cards-card-body-link__s_color "
+                        href="src/pdf/AUTOMATIZACION_AWS_NASA.pdf">Descargar Guía PDF</a>
+                    <a class="career-cards-card-body-link__s_color " href="To_do_list\index.html">To Do
+                        List NASA</a>
+                    <p class="card-text career-cards-card-body-subtitle__p_color card-text"><small
+                            class="career-cards-card-body-subtitle__p_color">Automatización con Amazon AWS</small></p>
+                </div>
+            </div>
+            <div class=" career-cards-card card ">
+                <img src="src/img/projects/Prestashop_cvtools.jpg" class="career-cards-card__img card-img-top"
+                    alt="...">
+                <div class="career-cards-card-body card-body">
+                    <h5 class="career-cards-card-body-title__p_color card-title">MarketPlace. Web corporativa</h5>
+                    <p class="card-text career-cards-card-body-subtitle__p_color">Creación y mantenimiento de página web
+                        corporativa
+                        para empresas. Worpress, Prestashop, Shopify
+                    </p>
+                    <a class="career-cards-card-body-link__s_color " href="www.cvtools.es">Entra en la APP</a>
+                    <p class="card-text career-cards-card-body-subtitle__p_color card-text"><small
+                            class=" career-cards-card-body-subtitle__p_color">Desarrollada en Prestashop</small></p>
+                </div>
+            </div>
+            <div class=" career-cards-card card ">
+                <img src="src/img/projects/Soy-unica.jpg" class="career-cards-card__img card-img-top" alt="...">
+                <div class="career-cards-card-body card-body">
+                    <h5 class="career-cards-card-body-title__p_color card-title">Web descarga y promoción</h5>
+                    <p class="card-text career-cards-card-body-subtitle__p_color">Página dedicada a la descarga y
+                        promoción de
+                        publicación de un libro.
+                    </p>
+                    <a class="career-cards-card-body-link__s_color " href="https://pablo2vbng.github.io/soyUnica/">Entra
+                        en la APP</a>
+                    <p class="card-text career-cards-card-body-subtitle__p_color card-text"><small
+                            class=" career-cards-card-body-subtitle__p_color">Html, css</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- RADIAL IMAGE -->
+    <div class="back-radial">
+
+    </div>
+    <!-- END RADIAL IMAGE -->
+    <!-- END CAREER SECTION -->
+    <!-- USED TECHNOLOGIES -->
+    <div class="tech">
+        <h2 class="tech-tittle__s_color"><strong>TECNOLOGÍAS</strong></h2>
+        <div class="tech-img flex-style">
+            <a href="https://aws.amazon.com/es/" target="_blank">
+                <img class="tech-img-item" src="src/img/tech/Amazon_Web_Services_Logo.svg.png" alt="Amazon-img">
+            </a>
+            <a href="https://angular.dev/" target="_blank">
+                <img class="tech-img-item" src="src/img/tech/angular.png" alt="Angular-img">
+            </a>
+            <a href="https://getbootstrap.com/" target="_blank">
+                <img class="tech-img-item" src="src/img/tech/bootstrap.png" alt="bootstrap-img">
+            </a>
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">
+                <img class="tech-img-item" src="src/img/tech/css.png" alt="css-img">
+            </a>
+            <a href="https://www.figma.com/" target="_blank">
+                <img class="tech-img-item" src="src/img/tech/Figma.svg" alt="figma-img">
+            </a>
+            <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">
+                <img class="tech-img-item" src="src/img/tech/html.png" alt="html-img">
+            </a>
+            <a href="https://www.oracle.com/java/" target="_blank">
+                <img class="tech-img-item" src="src/img/tech/java.png" alt="java-img">
+            </a>
+            <a href="https://nodejs.org/es/" target="_blank">
+                <img class="tech-img-item" src="src/img/tech/nodejs.png" alt="node-img">
+            </a>
+            <a href="https://www.python.org/" target="_blank">
+                <img class="tech-img-item" src="src/img/tech/python.png" alt="python-img">
+            </a>
+            <a href="https://react.dev/" target="_blank">
+                <img class="tech-img-item" src="src/img/tech/react.png" alt="react-img">
+            </a>
+            <a href="https://vuejs.org/" target="_blank">
+                <img class="tech-img-item" src="src/img/tech/vue.png" alt="vue-img">
+            </a>
+        </div>
+    </div>
+    <!-- END USED TECHNOLOGIES  -->
+    <!-- CONTACT -->
+    <div class="contact" id="contact">
+        <h2 class="contact-tittle__s_color"><strong>CONTACTO</strong></h2>
+        <form class="contact-form" method="POST" action="#" target="_blank" enctype="multipart/form-data">
+            <div class="contact-form-item">
+                <label class="contact-form-item-label" for="name">Nombre: </label>
+                <input class="contact-form-item-input" type="text" id="name" name="name" required>
+            </div>
+            <div class="contact-form-item">
+                <label class="contact-form-item-label" for="email">Email: </label>
+                <input class="contact-form-item-input" type="email" id="email" name="email" required>
+            </div>
+            <div class="contact-form-item">
+                <label class="contact-form-item-label" for="phone-number">Teléfono</label>
+                <input class="contact-form-item-input" type="tel" id="phone-number" name="phone-number">
+            </div>
+            <div class="contact-form-item">
+                <label class="contact-form-item-label" for="comments">Comentarios</label>
+                <textarea class="contact-form-item-input" name="comments" id="comments" rows="5"></textarea>
+            </div>
+            <div class="contact-form-terms">
+                <input class="contact-form-terms-checkbox" type="checkbox" id="terms" name="terms" required>
+                <label class="contact-form-terms-label" for="terms">Acepto las <a class="contact-form-terms-label-link"
+                        href="#">condiciones del servicio</a></label>
+            </div>
+            <button class="contact-form-button" type="submit">Enviar</button>
+        </form>
+    </div>
+    <!-- END CONTACT -->
+    <!-- FOOTER -->
+    <div class="footer flex-style">
+        <div class="footer-allrights">
+            <p class="footer-allrights__p_color">2025 Pablo Vidal Vidal. Todos los derechos reservados</p>
+        </div>
+        <div class="footer-icons">
+            <a class="footer-icons-item" href="https://es.linkedin.com/" target="_blank"><span><i
+                        class="bi bi-linkedin"></i></span></a>
+            <a class="footer-icons-item" href="https://github.com/Pablo2vbng" target="_blank"><span><i
+                        class="bi bi-github"></i></span></a>
+            <a class="footer-icons-item" href="https://www.instagram.com/" target="_blank"><span><i
+                        class="bi bi-instagram"></i></span></a>
+            <a class="footer-icons-item" href="https://www.whatsapp.com/?lang=es" target="_blank"><span><i
+                        class="bi bi-whatsapp"></i></span></a>
+        </div>
+
+
+    </div>
+    <!-- END FOOTER -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

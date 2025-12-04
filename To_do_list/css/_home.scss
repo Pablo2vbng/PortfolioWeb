@@ -1,0 +1,107 @@
+@use 'mixins';
+@use 'vars';
+@use 'general';
+
+.video-background {
+    position: fixed; 
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto;
+    z-index: -1; 
+    object-fit: cover; 
+}
+
+.main-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 8rem;
+    position: relative;
+    margin-top: 9.3750rem;
+    margin-bottom: 6.2500rem;
+    justify-content: center;
+    @media (max-width:48rem){
+        top:100%;
+        gap:2rem;
+    }
+}
+
+.end-of-the-world-card{
+    display:flex;
+    flex-direction: column;
+    max-width: 40%;
+    @media (max-width:48rem){
+        max-width: 80%;
+    }
+    &__title{
+        color: var(--primary-text-color);
+        font-size: 7rem;
+        @media (max-width:48rem){
+            font-size:5rem;
+        }
+    }
+    &__text{
+        color: var(--primary-text-color);
+        font-size: 1.1rem;
+    }
+    &__button{
+        @include mixins.buttons();
+        max-width: 12rem;
+        &:hover{
+            @include mixins.buttons-hover();
+        }
+    }
+}
+
+.to-do-list{
+    z-index:1;
+    max-width: 40%;
+    padding-top: 1.8750rem;
+    @media (max-width:48rem){
+        max-width: 80%;
+    }
+    &-form{
+        display:flex;
+        align-items: center;
+        gap:0.3750rem;
+        &__input{
+            padding:0.3125rem;
+            border-radius: 0.3125rem;
+            border: none; 
+            margin-right: 1rem;
+        }
+        &__submit-btn{
+            @include mixins.buttons();
+            &:hover{
+                @include mixins.buttons-hover();
+            }
+        }
+    }
+    &-title{
+        color:var(--primary-text-color)
+    }
+    &-ul{
+        list-style:none;
+        &__li{
+            display:flex;
+            gap: 1rem;
+            color: var(--primary-text-color);
+            padding-top:1rem;
+            &-btn{
+                border-radius: 50%;
+                padding-right:0.3125rem;
+                padding-left:0.3125rem;
+                color: var(--primary-text-color);
+                border: 1px solid var(--primary-text-color);
+                background-color: transparent;
+                &:hover{
+                    background-color: var(--primary-text-color);
+                    color: var(--secundary-text-color);
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,13 @@
+@use 'vars';
+@use 'mixins';
+@use 'general';
+
+.footer{
+    margin-top: 3rem;
+    &-icons-item{
+        color:var(--primary-text-color);
+    }
+    &-icons-item:hover{
+        color:var(--secundary-text-color);
+    }
+}

@@ -1,0 +1,20 @@
+@use 'vars';
+@use 'mixins';
+@use 'general';
+
+.footer {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    &-allrights__p_color {
+        color: var(--primary-text-color);
+    }
+
+    &-icons-item-logo {
+        color: var(--primary-text-color);
+    }
+
+    &-icons-item-logo:hover {
+        color: var(--secundary-text-color);
+    }
+}

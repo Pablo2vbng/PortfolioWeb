@@ -1,0 +1,56 @@
+@use 'vars';
+@use 'mixins';
+@use 'general';
+
+/* ***ESTILOS HEADER*** */
+.nasa-header-nav{ 
+    position:fixed;
+    top:0;
+    background-color: transparent;
+    padding-top:0;
+    padding-bottom:0;
+    &__toggler{
+        border: none;
+        &:hover{
+            background-color: var(--secundary-text-color);
+            border: none;
+        }
+    }
+    &__logo{
+        color: var(--primary-text-color);
+        &:hover{
+            color: var(--secundary-text-color);
+        }
+    }&-list{
+        &-item__white{
+            @include mixins.link();
+            align-items: right;
+            &:hover{
+                @include mixins.link-hover();
+            }
+        }
+    }  
+
+}
+
+.navbar-expand-lg{
+    color: var(--primary-text-color);
+}
+
+.navbar-toggler-icon{
+    background-color: var(--nav-bg-color);
+}
+
+.navbar-toggler{
+    padding:0;
+    border: none;
+}
+
+.nasa-header-nav .navbar-toggler:focus,
+.nasa-header-nav .navbar-brand:focus,
+.nasa-header-nav .nav-link:focus {
+    outline: none;
+    border-color: var(--primary-text-color);
+    box-shadow: 0 0 0 0.125rem var(--secundary-text-color);
+    color: var(--secundary-text-color);
+}
