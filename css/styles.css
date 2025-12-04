@@ -114,7 +114,7 @@ body {
 }
 @media (max-width: 36rem) {
   .introducing-section-img__arrow {
-    max-width: 5rem;
+    max-width: 2rem;
   }
 }
 .introducing-section-text {
