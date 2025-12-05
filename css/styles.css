@@ -103,7 +103,7 @@ body {
 }
 @media (max-width: 36rem) {
   .introducing-section-img__avatar {
-    max-width: 6rem;
+    max-width: 7.5rem;
   }
 }
 .introducing-section-img__arrow {
@@ -191,7 +191,7 @@ body {
   z-index: 1;
 }
 .career-cards-card {
-  max-width: 45%;
+  max-width: 48%;
   margin: 0.5rem;
   border: 0.0625rem solid var(--secundary-text-color);
 }
@@ -214,6 +214,8 @@ body {
   border-radius: 0.3125rem;
   padding: 0.3rem;
   margin-bottom: 0.0938rem;
+  display: block;
+  max-width: 30%;
 }
 .career-cards-card-body-link__s_color:hover {
   background-color: var(--secundary-text-color);
@@ -282,16 +284,22 @@ body {
 }
 .contact-form-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .contact-form-item-label {
   padding-right: 1.25rem;
+  max-width: 40%;
 }
 .contact-form-item-input {
-  width: 80%;
+  max-width: 80%;
   border: 0.0625rem solid var(--secundary-text-color);
   border-radius: 0.3125rem;
   color: var(--primary-text-color);
+}
+@media (max-width: 32rem) {
+  .contact-form-item-input {
+    max-width: 60%;
+  }
 }
 .contact-form-terms-label-link {
   color: var(--primary-text-color);
