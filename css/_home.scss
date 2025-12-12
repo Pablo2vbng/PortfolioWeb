@@ -90,13 +90,16 @@
     }
     &-cards{
         margin:2rem;
-        flex-wrap:wrap;
         z-index:1;  
-        width: 90%; 
         margin: 0 auto;
+        flex-wrap:wrap;
         &-card{
             margin:0.5rem;
             border: 0.0625rem solid var(--secundary-text-color);
+            max-width: 45%; 
+            @media (max-width: 32rem){
+                max-width:100%
+            }
             &-body{
                 &-title__p_color{
                     color:var(--primary-text-color);

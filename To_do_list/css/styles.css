@@ -30,6 +30,7 @@ body {
   background-color: transparent;
   padding-top: 0;
   padding-bottom: 0;
+  z-index: 1;
 }
 .nasa-header-nav__toggler {
   border: none;
@@ -217,6 +218,18 @@ body {
 .to-do-list-ul__li-btn:hover {
   background-color: var(--primary-text-color);
   color: var(--secundary-text-color);
+}
+
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=styles.css.map */
