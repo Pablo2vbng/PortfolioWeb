@@ -127,8 +127,8 @@
 /* ***BACK RADIAL*** */
 
 .back-radial {
-    position: absolute; 
-    top: 150%;
+    position: relative; 
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 21.8750rem; 
@@ -138,7 +138,7 @@
     opacity: 0.6; 
     pointer-events: none; 
     @media (max-width: 32rem){
-        top:250%;
+        top: 40%;
     }
 }
 /* ***TECH*** */

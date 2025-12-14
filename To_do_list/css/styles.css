@@ -37,8 +37,11 @@ body {
 }
 
 /* ***ESTILOS HEADER*** */
+.nasa-header {
+  background-color: transparent;
+}
 .nasa-header-nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   background-color: transparent;
   padding-top: 0;
@@ -84,6 +87,7 @@ body {
 .navbar-toggler {
   padding: 0;
   border: none;
+  background-color: transparent;
 }
 
 .nasa-header-nav .navbar-toggler:focus,
@@ -238,7 +242,40 @@ body {
   position: relative;
   max-width: 80%;
   margin: 0 auto;
-  top: 20%;
+  margin-top: 10%;
+  padding: 1rem;
+}
+@media (max-width: 42rem) {
+  .section-table {
+    margin-top: 30%;
+  }
+}
+
+.section-table {
+  max-width: 90%;
+  color: var(--primary-text-color);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 1rem;
+}
+.section-table-head-row {
+  border-bottom: 2px solid var(--primary-text-color);
+}
+.section-table-head-row_item {
+  padding: 1rem 1rem;
+  text-align: left;
+}
+.section-table-body-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.section-table-body-row_head {
+  padding-left: 1rem;
+}
+.section-table-body-row_item {
+  padding: 1rem;
+  font-weight: 300;
+}
+.section-table-body-row:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /*# sourceMappingURL=styles.css.map */

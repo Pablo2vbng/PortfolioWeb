@@ -8,5 +8,38 @@
     position: relative;
     max-width: 80%;
     margin: 0 auto;
-    top:20%;
+    margin-top: 10%;
+    padding: 1rem;
+    @media (max-width:42rem){
+        margin-top:30%;
+   }
+ }
+
+.section-table {
+    max-width: 90%;             
+    color: var(--primary-text-color);
+    background-color: rgba(0, 0, 0, 0.6); 
+    border-radius:1rem;
+    &-head-row {
+        border-bottom: 2px solid var(--primary-text-color);
+        
+        &_item {
+            padding: 1rem 1rem;  
+            text-align: left;        
+        }
+    }
+
+    &-body-row {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        &_head{
+            padding-left:1rem;
+        }      
+        &_item {
+            padding: 1rem;
+            font-weight: 300;       
+        }
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
 }
