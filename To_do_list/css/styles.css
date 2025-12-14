@@ -101,7 +101,7 @@ body {
 
 .footer {
   position: relative;
-  top: 0;
+  bottom: 0;
   width: 100%;
   margin-top: 10%;
 }
@@ -248,7 +248,7 @@ body {
 }
 @media (max-width: 42rem) {
   .section-table {
-    margin-top: 35%;
+    margin-top: 40%;
   }
 }
 
