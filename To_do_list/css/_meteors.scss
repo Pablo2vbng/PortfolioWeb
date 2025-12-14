@@ -2,15 +2,11 @@
 @use 'vars';
 @use 'general';
 
-.video-background {
-    position: fixed; 
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    width: auto; 
-    height: auto;
-    z-index: 0; 
-    object-fit: cover; 
-}
 
+.section-table{
+    z-index: 1;
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    top:20%;
+}

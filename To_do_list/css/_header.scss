@@ -4,12 +4,12 @@
 
 /* ***ESTILOS HEADER*** */
 .nasa-header-nav{ 
-    position:fixed;
+    position:sticky;
     top:0;
     background-color: transparent;
     padding-top:0;
     padding-bottom:0;
-    z-index:1;
+    z-index:100;
     &__toggler{
         border: none;
         &:hover{
