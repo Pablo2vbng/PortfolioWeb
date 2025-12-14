@@ -26,7 +26,7 @@ async function connectNasa() {
                     <td class="section-table-body-row_item">${diameter} m</td>
                     <td class="section-table-body-row_item">${isDangerous ? 'SÍ. Vas a morir' : 'No. Hoy te salvas'}</td>
                     <td class="section-table-body-row_item">
-                        <a href="${urlNasa}" target="_blank" class="btn btn-sm btn-outline-light section-table-body-row_item__button">Info</a>
+                        <a href="${urlNasa}" target="_blank" class="btn btn-sm btn-outline-light section-table-body-row_item__button">+Info</a>
                     </td>
                 </tr>
                 `;
