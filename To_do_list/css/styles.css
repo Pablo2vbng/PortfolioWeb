@@ -100,9 +100,10 @@ body {
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  top: 0;
   width: 100%;
+  margin-top: 15%;
 }
 .footer-allrights__p_color {
   color: var(--primary-text-color);
