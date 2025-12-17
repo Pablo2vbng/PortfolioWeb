@@ -7,7 +7,9 @@ async function connectNasa() {
 
     try {
         const response = await fetch(apiURL);
+        console.log(response)
         const data = await response.json();
+        console.log(data)
         const asteroids = data.near_earth_objects[today];
 
         console.log("Datos cargados:", asteroids); 
